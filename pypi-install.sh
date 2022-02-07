@@ -9,7 +9,7 @@ cd .pypiinfo
 echo "====> get service file and pypi-info.py"
 curl -sL -o pypi-info.service https://raw.githubusercontent.com/juggledad/pypi-info/main/pypi-info.service
 curl -sL -o pypi-info.py https://raw.githubusercontent.com/juggledad/pypi-info/main/pypi-info.py 
-curl -sL -o pypiconfig.py https://raw.githubusercontent.com/juggledad/pypi-info/main/pypiconfig.py 
+curl -sL -o pypyconfig.py https://raw.githubusercontent.com/juggledad/pypi-info/main/pypiconfig.py 
 
 echo "====> remove old pypi-info.service file if it exists"
 sudo rm /lib/systemd/system/pypi_info.service
