@@ -29,8 +29,8 @@ import json
 # ---------------------------------------------------------
 # enter your MQTT broker's IP or hostname in pypi-config.py
 # ---------------------------------------------------------
-import pypi_config
-broker_address = pypi-config.broker
+import pypiconfig
+broker_address = pypiconfig.broker
 
 hostname = socket.gethostname()
 connection_topic = "pypi_info/connected/connected/hostname"
