@@ -1,5 +1,9 @@
 # pypi-info
-Python program to process commands sent by MQTT
+Python program to process commands sent by MQTT. Tested on:  
+**Pi Zero W Rev 1.1**  
+**Pi 3 Model B Rev 1.2**  
+**Pi 3 Model B Plus Rev 1.3**  
+**Pi 4 Model B Rev 1.2**  
 
 **pypi-info.py** is designed to be installed on one or more Pi's[^1] and will run when the Pi is booted (using **systemd**). It will wait to receive MQTT messages, processes the command in the message and then publish the results. 
 
@@ -58,7 +62,6 @@ This flow can be set to periodically run a series of commands. All Pi's with **p
 Eventually the flow will be adapted to store the data (one row for each Pi) in an SQLite database and a database will be created to siaplay the results.
 
 # Installation
-open a terminal on your Raspberry Pi. copy 
 Running the following command will download and run the script **pypi-install.sh**. If you want to review the contents of the script first, you can view it [here](https://github.com/juggledad/pypi-info/blob/main/pypi-install.sh).
 ```
 bash <(curl -sL https://raw.githubusercontent.com/juggledad/pypi-info/main/pypi-install.sh)
