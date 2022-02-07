@@ -1,0 +1,16 @@
+[Unit]
+ Description=pypi-info: NR command proccesser
+ After=multi-user.target network.target 
+ Wants=network.target
+
+[Service]
+ Type=idle
+ ExecStart=/usr/bin/python3 /home/pi/.pypiinfo/pypi-info.py
+ User=pi
+ StandardOutput=syslog
+ StandardError=syslog
+ SyslogIdentifier=pypi-info
+ Restart=always
+
+[Install]
+ WantedBy=multi-user.target
