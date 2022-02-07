@@ -1,6 +1,6 @@
 # pypi-info
 Python program to process commands sent by MQTT. Tested on:  
-**Model A Plus Rev 1.1**
+**Model A Plus Rev 1.1**  
 **Pi Zero W Rev 1.1**  
 **Pi 3 Model B Rev 1.2**  
 **Pi 3 Model B Plus Rev 1.3**  
