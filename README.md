@@ -57,4 +57,11 @@ This flow can be set to periodically run a series of commands. All Pi's with **p
 
 Eventually the flow will be adapted to store the data (one row for each Pi) in an SQLite database and a database will be created to siaplay the results.
 
+# Installation
+open a terminal on your Raspberry Pi. copy 
+Running the following command will download and run the script **pypi-install.sh**. If you want to review the contents of the script first, you can view it [here](https://github.com/juggledad/pypi-info/blob/main/pypi-install.sh).
+```
+bash <(curl -sL https://raw.githubusercontent.com/juggledad/pypi-info/main/pypi-install.sh)
+```
+
 [^1]: pypi-info.py might run on other devices, it just hasn't been tested.
