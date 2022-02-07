@@ -14,10 +14,10 @@ curl -sL -o pypi-config.py https://raw.githubusercontent.com/juggledad/pypi-info
 echo "====> remove old pypi-info.service file if it exists"
 sudo rm /lib/systemd/system/pypi_info.service
 
-echo "====> move pypi-info.service.temp to /lib/systemd/system/ and rename "
+echo "====> move pypi-info.service.temp to /lib/systemd/system/ and rename"
 sudo mv pypi-info.service /lib/systemd/system/pypi-info.service
 
-echo "====> install python3-pip and  paho-mqtt"
+echo "====> install python3-pip and paho-mqtt"
 #sudo apt-get update
 #sudo apt-get upgrade -y
 sudo apt-get install python3-pip -y
