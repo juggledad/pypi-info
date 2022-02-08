@@ -18,9 +18,10 @@ echo "====> move pypi-info.service.temp to /lib/systemd/system/ and rename"
 sudo mv pypi-info.service /lib/systemd/system/pypi-info.service
 
 echo "====> install python3-pip and paho-mqtt"
-#sudo apt-get update
-#sudo apt-get upgrade -y
-sudo apt-get install python3-pip -y
+sudo apt update
+#sudo apt upgrade -y
+sudo apt install python3 -y
+sudo apt install python3-pip -y
 sudo pip3 install paho-mqtt
 
 echo "====> enable the pypi-info.service"
