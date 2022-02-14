@@ -11,8 +11,9 @@ curl -sL -o pypi-info.service https://raw.githubusercontent.com/juggledad/pypi-i
 curl -sL -o pypi-info.py https://raw.githubusercontent.com/juggledad/pypi-info/main/pypi-info.py 
 curl -sL -o pypiconfig.py https://raw.githubusercontent.com/juggledad/pypi-info/main/pypiconfig.py 
 
-echo "====> remove old pypi-info.service file if it exists"
+echo "====> remove old pypi_info.service and pypi-info.service file if they exists"
 sudo rm /lib/systemd/system/pypi_info.service
+sudo rm /lib/systemd/system/pypi-info.service
 
 echo "====> move pypi-info.service.temp to /lib/systemd/system/ and rename"
 sudo mv pypi-info.service /lib/systemd/system/pypi-info.service
