@@ -4,14 +4,17 @@
  Wants=network.target
 
 [Service]
- Type=idle
+ Type=simple
  ExecStart=/usr/bin/python3 /home/pi/.pypiinfo/pypi-info.py
  User=pi
+ #Use SIGINT to stop
+ KillSignal=SIGINT
  StandardOutput=syslog
  StandardError=syslog
  SyslogIdentifier=pypi-info
- RemainAfterExit=no
- Restart=always
+ #Auto restart on crash
+ Restart=on-failure
+# RemainAfterExit=no
  RestartSec=5s
  
 [Install]
