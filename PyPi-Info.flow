@@ -1,21 +1,21 @@
 [
     {
-        "id": "07d69e2a460a18da",
+        "id": "5f485e062dc78bcc",
         "type": "tab",
-        "label": "Pi-Info gather V0.3.0",
+        "label": "Pi-Info gather V0.3.2",
         "disabled": false,
-        "info": "v0.2.1 - added code to get node.js version number\n       - added right alignment for versions\nv0.3.0 - clean up code",
+        "info": "v0.2.1 - added code to get node.js version number\n       - added right alignment for versions\nv0.3.0 - clean up code\n\nv0.3.1 - fixed issue where only one item of software was being displayed\nv0.3.2 - fixed php version info and added grafana to the software reported",
         "env": []
     },
     {
-        "id": "53ac84143b97ee93",
+        "id": "c4ddbef3c7b4c989",
         "type": "tab",
         "label": "Dashboard",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "9275e1940cb248fa",
+        "id": "feb7fb4e1a842f5a",
         "type": "tab",
         "label": "Create database",
         "disabled": false,
@@ -23,39 +23,39 @@
         "env": []
     },
     {
-        "id": "ca9026e3044635be",
+        "id": "1f5091586d73cdb7",
         "type": "group",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "style": {
             "fill": "#ffff7f",
             "label": true
         },
         "nodes": [
-            "d11644816c6cb5b0",
-            "e1b2514610e2332a",
-            "53c46dbef630ef61",
-            "e6e2815c74aaba8a",
-            "07d42386a1b45d56",
-            "cc7a3620ea5d51b0",
-            "c45fd4dcc90fe2c4",
-            "11c1ab7c7c31de7b",
-            "ee5ba830da6005b9",
-            "20eeb18b5ce1d97f",
-            "f49a159920175ff9",
-            "5416021a7a1f49d6",
-            "791e1d16b4c171c6",
-            "d45cb025b5d3ec8f",
-            "41e7918f97b38b1e",
-            "c3b2b3ba6cf8b9b5",
-            "3f6caed898db03bc",
-            "1d71e0d4161885f4",
-            "0932345dcb392f1c",
-            "20bb34378d9e2cdc",
-            "d4c75776214e3848",
-            "a18e2683064c84df",
-            "a29e08fc28db688b",
-            "2821718dc9f61623"
+            "6194e40ea4cb7401",
+            "6fa9a629360e39b8",
+            "ab623587755db157",
+            "48df7e781c9ea28f",
+            "fcdd7c2f0f22aab6",
+            "d58c6e91265357e3",
+            "9dce12ad2b551cc5",
+            "aa0900fbbf720b1b",
+            "d9da1b4d654f268f",
+            "cecf8537e0334a87",
+            "e82c9284c9e256eb",
+            "c07f0c842673bc4f",
+            "d7ba2e7a7fe33a57",
+            "2dd68db2f1f2e7c5",
+            "0582db9d1a8d6172",
+            "2d5442a5760fbebb",
+            "fe9ed741b11f46fd",
+            "7b13e38d1831acb1",
+            "63d86b9e06e3ab61",
+            "22d9689f25be53b3",
+            "50b7f46eb29fae57",
+            "b11161c1b0933093",
+            "a4bd1a6ad85927ea",
+            "495e5cb28a71bf40"
         ],
         "x": 94,
         "y": -1,
@@ -63,18 +63,18 @@
         "h": 382
     },
     {
-        "id": "003022e90c876f9e",
+        "id": "67ac0672a9e813bd",
         "type": "group",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "style": {
             "fill": "#ff7f7f",
             "label": true
         },
         "nodes": [
-            "66d78b67dacf3b8c",
-            "6b3c9594059ae8c1",
-            "eef7f3ce393c51f7"
+            "a61c86222c63e022",
+            "5915b5c8498b6650",
+            "c5f92639b96c30cb"
         ],
         "x": 814,
         "y": 439,
@@ -82,27 +82,27 @@
         "h": 162
     },
     {
-        "id": "0fd78e353e4e133f",
+        "id": "a45c305e31a9c284",
         "type": "group",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "style": {
             "fill": "#ffdf7f",
             "label": true
         },
         "nodes": [
-            "405b00f8d21dd777",
-            "35b3d2c3bbdb4f73",
-            "86420a3490d88b70",
-            "3058d3cf59fa0d07",
-            "5e8d29599a4a710a",
-            "b46c045a24dc2b1f",
-            "b031b3b48f87bc3d",
-            "2e1e2ff65e58f627",
-            "8aded5205a7f9478",
-            "2f8ae1db2caaf4b5",
-            "f7272b9b05a6da2d",
-            "a876efd4da821745"
+            "839aa7f8c25ab6d5",
+            "658b15755779cf25",
+            "6b11751446374579",
+            "4580c3770f462b87",
+            "8e2cab98cbb3416f",
+            "6587326747cf44c5",
+            "1bb50e9f0cc50c5e",
+            "34ef594d9f41cec4",
+            "4510f6bac14d16a7",
+            "17871c018f22da1b",
+            "f533176ac7842ee6",
+            "cb30d895e50ba973"
         ],
         "x": 94,
         "y": 1179,
@@ -110,38 +110,40 @@
         "h": 282
     },
     {
-        "id": "579e908f7463658d",
+        "id": "6d063c17373d5270",
         "type": "group",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "style": {
             "fill": "#ff3f3f",
             "label": true
         },
         "nodes": [
-            "fa429b0eabf404fd"
+            "c71506966974742f"
         ],
         "x": 154,
-        "y": 59
+        "y": 59,
+        "w": 752,
+        "h": 82
     },
     {
-        "id": "fc0df6321866cd1f",
+        "id": "ce8d0c70b33c0823",
         "type": "group",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "style": {
             "fill": "#ffdf7f",
             "label": true
         },
         "nodes": [
-            "96a45c4640a5927d",
-            "033b7fb995c98daf",
-            "6af5f7c0afeff147",
-            "0a2b09b1adbdf331",
-            "eb820725f3582e55",
-            "bc96487017b5fd2d",
-            "42f720ad5e39b6ea",
-            "92e4c364240a27eb"
+            "d57160dfbd21a0a2",
+            "f134c76855d41ae1",
+            "57c3f2502f961849",
+            "fb1d5bb61132322f",
+            "731d3cd6de6f3a33",
+            "48ab952841b6f55a",
+            "02fdd151761b82f5",
+            "574ce6bdb578c561"
         ],
         "x": 154,
         "y": 439,
@@ -149,7 +151,63 @@
         "h": 222
     },
     {
-        "id": "43df993e2641ccc7",
+        "id": "fc280b0a645350ec",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqttpizw.local",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9113425422938f2e",
+        "type": "ui_group",
+        "name": "show all P's",
+        "tab": "4743286be1803569",
+        "order": 2,
+        "disp": false,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d54830887efaf336",
+        "type": "sqlitedb",
+        "db": "/home/pi/databases/pypi.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "4743286be1803569",
+        "type": "ui_tab",
+        "name": "MainScreen",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "28948acdaad5f246",
         "type": "ui_base",
         "theme": {
             "name": "theme-light",
@@ -246,57 +304,7 @@
         }
     },
     {
-        "id": "fc280b0a645350ec",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "mqttpizw.local",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "9113425422938f2e",
-        "type": "ui_group",
-        "name": "show all P's",
-        "tab": "4743286be1803569",
-        "order": 2,
-        "disp": false,
-        "width": "12",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "4743286be1803569",
-        "type": "ui_tab",
-        "name": "MainScreen",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "91eef5953f988089",
+        "id": "8c125b787d0ba58b",
         "type": "ui_tab",
         "name": "HostDetails",
         "icon": "dashboard",
@@ -305,10 +313,10 @@
         "hidden": false
     },
     {
-        "id": "d3b0dfd8ac758638",
+        "id": "556d80d4ed6e0469",
         "type": "ui_group",
         "name": "Details",
-        "tab": "91eef5953f988089",
+        "tab": "8c125b787d0ba58b",
         "order": 1,
         "disp": false,
         "width": "8",
@@ -316,16 +324,10 @@
         "className": ""
     },
     {
-        "id": "d54830887efaf336",
-        "type": "sqlitedb",
-        "db": "/home/pi/databases/pypi.db",
-        "mode": "RWC"
-    },
-    {
-        "id": "d11644816c6cb5b0",
+        "id": "6194e40ea4cb7401",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "hostname",
         "props": [
             {
@@ -343,15 +345,15 @@
         "y": 80,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "e1b2514610e2332a",
+        "id": "6fa9a629360e39b8",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "node-red",
         "props": [
             {
@@ -373,15 +375,15 @@
         "y": 200,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "53c46dbef630ef61",
+        "id": "ab623587755db157",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "osrelease",
         "props": [
             {
@@ -399,15 +401,15 @@
         "y": 200,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "e6e2815c74aaba8a",
+        "id": "48df7e781c9ea28f",
         "type": "mqtt in",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "",
         "topic": "pypi_info/command/#",
         "qos": "2",
@@ -421,15 +423,15 @@
         "y": 340,
         "wires": [
             [
-                "07d42386a1b45d56"
+                "fcdd7c2f0f22aab6"
             ]
         ]
     },
     {
-        "id": "07d42386a1b45d56",
+        "id": "fcdd7c2f0f22aab6",
         "type": "debug",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -444,10 +446,10 @@
         "wires": []
     },
     {
-        "id": "cc7a3620ea5d51b0",
+        "id": "d58c6e91265357e3",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "grafana",
         "props": [
             {
@@ -465,15 +467,15 @@
         "y": 80,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "c45fd4dcc90fe2c4",
+        "id": "9dce12ad2b551cc5",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "netatalk",
         "props": [
             {
@@ -491,15 +493,15 @@
         "y": 140,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "11c1ab7c7c31de7b",
+        "id": "aa0900fbbf720b1b",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "influx",
         "props": [
             {
@@ -521,15 +523,15 @@
         "y": 80,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "ee5ba830da6005b9",
+        "id": "d9da1b4d654f268f",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "IP",
         "props": [
             {
@@ -551,15 +553,15 @@
         "y": 140,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "20eeb18b5ce1d97f",
+        "id": "cecf8537e0334a87",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "Date",
         "props": [
             {
@@ -581,15 +583,15 @@
         "y": 80,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "f49a159920175ff9",
+        "id": "e82c9284c9e256eb",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "temperature",
         "props": [
             {
@@ -611,15 +613,15 @@
         "y": 260,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "5416021a7a1f49d6",
+        "id": "c07f0c842673bc4f",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "memory",
         "props": [
             {
@@ -641,19 +643,19 @@
         "y": 140,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "791e1d16b4c171c6",
+        "id": "d7ba2e7a7fe33a57",
         "type": "link out",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "to Run Command",
         "mode": "link",
         "links": [
-            "6af5f7c0afeff147"
+            "57c3f2502f961849"
         ],
         "x": 390,
         "y": 340,
@@ -661,10 +663,10 @@
         "l": true
     },
     {
-        "id": "d45cb025b5d3ec8f",
+        "id": "2dd68db2f1f2e7c5",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "model",
         "props": [
             {
@@ -686,15 +688,15 @@
         "y": 140,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "41e7918f97b38b1e",
+        "id": "0582db9d1a8d6172",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "mosquitto",
         "props": [
             {
@@ -716,15 +718,15 @@
         "y": 140,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "c3b2b3ba6cf8b9b5",
+        "id": "2d5442a5760fbebb",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "python3",
         "props": [
             {
@@ -742,15 +744,15 @@
         "y": 260,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "3f6caed898db03bc",
+        "id": "fe9ed741b11f46fd",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "nginx",
         "props": [
             {
@@ -772,15 +774,15 @@
         "y": 200,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "1d71e0d4161885f4",
+        "id": "7b13e38d1831acb1",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "php",
         "props": [
             {
@@ -802,15 +804,15 @@
         "y": 200,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "0932345dcb392f1c",
+        "id": "63d86b9e06e3ab61",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "sqlite3",
         "props": [
             {
@@ -832,15 +834,15 @@
         "y": 260,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "405b00f8d21dd777",
+        "id": "839aa7f8c25ab6d5",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "0fd78e353e4e133f",
+        "z": "5f485e062dc78bcc",
+        "g": "a45c305e31a9c284",
         "name": "manual run",
         "props": [
             {
@@ -862,15 +864,15 @@
         "y": 1380,
         "wires": [
             [
-                "35b3d2c3bbdb4f73"
+                "658b15755779cf25"
             ]
         ]
     },
     {
-        "id": "20bb34378d9e2cdc",
+        "id": "22d9689f25be53b3",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "disk",
         "props": [
             {
@@ -892,15 +894,15 @@
         "y": 80,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "35b3d2c3bbdb4f73",
+        "id": "658b15755779cf25",
         "type": "function",
-        "z": "07d69e2a460a18da",
-        "g": "0fd78e353e4e133f",
+        "z": "5f485e062dc78bcc",
+        "g": "a45c305e31a9c284",
         "name": "Setup data for inserts",
         "func": "let hosts = flow.get(\"hostnames\")||[]\nlet piData = {}\nlet data = {}\nlet mem = {}\nlet disk = {}\nconst d1 = new Date();\n\nhosts.forEach(hostname => {\n   piData = flow.get(hostname)||{}\n   // build the database record\n   msg.hostname          = piData.hostname       \n   data.hostname         = piData.hostname       \n   data.last_seen        = d1.getTime()  \n   data.ip               = piData.ip\n   data.model            = piData.model\n   data.osrelease        = piData.osrelease\n   data.temperature      = piData.temperature\n\n   memory = piData.memory\n   data.mem_available    = memory.mem.available\n   data.mem_buff_cache   = memory.mem.buff_cache\n   data.mem_free         = memory.mem.free       \n   data.mem_shared       = memory.mem.shared\n   data.mem_total        = memory.mem.total\n   data.mem_used         = memory.mem.used\n   data.used_total       = memory.swap.total\n   data.used_free        = memory.swap.free    \n   data.used_swap        = memory.swap.used  \n\n   disk = piData.disk\n   data.disk_size        = disk.size\n   data.disk_used        = disk.used\n   data.disk_avaliable   = disk.avaliable \n   data.disk_percentused = disk.percentused\n\n   data.grafana          = piData.grafana\n   data.influx           = piData.influx\n   data.mosquitto        = piData.mosquitto\n   data.netatalk         = piData.netatalk\n   data.nginx            = piData.nginx\n   data.nodered          = piData.nodered\n   data.php              = piData.php\n   data.python3          = piData.python3\n   data.sqlite3          = piData.sqlite3\n  \n   msg.data = data\n\n // operation\n   node.send(msg)\n});\n\nreturn;",
         "outputs": 1,
@@ -912,23 +914,23 @@
         "y": 1340,
         "wires": [
             [
-                "5e8d29599a4a710a",
-                "2e1e2ff65e58f627",
-                "8aded5205a7f9478",
-                "2f8ae1db2caaf4b5",
-                "2f396a7b17b6f188"
+                "8e2cab98cbb3416f",
+                "34ef594d9f41cec4",
+                "4510f6bac14d16a7",
+                "17871c018f22da1b",
+                "58b987a861de2513"
             ]
         ]
     },
     {
-        "id": "3058d3cf59fa0d07",
+        "id": "4580c3770f462b87",
         "type": "link out",
-        "z": "07d69e2a460a18da",
-        "g": "0fd78e353e4e133f",
+        "z": "5f485e062dc78bcc",
+        "g": "a45c305e31a9c284",
         "name": "Go Update Dashboard",
         "mode": "link",
         "links": [
-            "c7dc9a8193f4d710"
+            "eb2e336937ed624b"
         ],
         "x": 860,
         "y": 1400,
@@ -936,10 +938,10 @@
         "l": true
     },
     {
-        "id": "5e8d29599a4a710a",
+        "id": "8e2cab98cbb3416f",
         "type": "template",
-        "z": "07d69e2a460a18da",
-        "g": "0fd78e353e4e133f",
+        "z": "5f485e062dc78bcc",
+        "g": "a45c305e31a9c284",
         "name": "REPLACE INTO piInfo",
         "field": "topic",
         "fieldType": "msg",
@@ -951,16 +953,16 @@
         "y": 1260,
         "wires": [
             [
-                "86420a3490d88b70",
-                "d6d4a3d92caf7a25"
+                "6b11751446374579",
+                "93e59022abb78dea"
             ]
         ]
     },
     {
-        "id": "b46c045a24dc2b1f",
+        "id": "6587326747cf44c5",
         "type": "debug",
-        "z": "07d69e2a460a18da",
-        "g": "0fd78e353e4e133f",
+        "z": "5f485e062dc78bcc",
+        "g": "a45c305e31a9c284",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -975,10 +977,10 @@
         "wires": []
     },
     {
-        "id": "66d78b67dacf3b8c",
+        "id": "a61c86222c63e022",
         "type": "catch",
-        "z": "07d69e2a460a18da",
-        "g": "003022e90c876f9e",
+        "z": "5f485e062dc78bcc",
+        "g": "67ac0672a9e813bd",
         "name": "",
         "scope": null,
         "uncaught": false,
@@ -986,15 +988,15 @@
         "y": 520,
         "wires": [
             [
-                "6b3c9594059ae8c1"
+                "5915b5c8498b6650"
             ]
         ]
     },
     {
-        "id": "6b3c9594059ae8c1",
+        "id": "5915b5c8498b6650",
         "type": "debug",
-        "z": "07d69e2a460a18da",
-        "g": "003022e90c876f9e",
+        "z": "5f485e062dc78bcc",
+        "g": "67ac0672a9e813bd",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -1009,28 +1011,28 @@
         "wires": []
     },
     {
-        "id": "b031b3b48f87bc3d",
+        "id": "1bb50e9f0cc50c5e",
         "type": "link in",
-        "z": "07d69e2a460a18da",
-        "g": "0fd78e353e4e133f",
+        "z": "5f485e062dc78bcc",
+        "g": "a45c305e31a9c284",
         "name": "Load to SQLite",
         "links": [
-            "0a2b09b1adbdf331"
+            "fb1d5bb61132322f"
         ],
         "x": 220,
         "y": 1300,
         "wires": [
             [
-                "35b3d2c3bbdb4f73"
+                "658b15755779cf25"
             ]
         ],
         "l": true
     },
     {
-        "id": "2e1e2ff65e58f627",
+        "id": "34ef594d9f41cec4",
         "type": "template",
-        "z": "07d69e2a460a18da",
-        "g": "0fd78e353e4e133f",
+        "z": "5f485e062dc78bcc",
+        "g": "a45c305e31a9c284",
         "name": "INSERT INTO memory",
         "field": "topic",
         "fieldType": "msg",
@@ -1042,15 +1044,15 @@
         "y": 1340,
         "wires": [
             [
-                "86420a3490d88b70"
+                "6b11751446374579"
             ]
         ]
     },
     {
-        "id": "8aded5205a7f9478",
+        "id": "4510f6bac14d16a7",
         "type": "template",
-        "z": "07d69e2a460a18da",
-        "g": "0fd78e353e4e133f",
+        "z": "5f485e062dc78bcc",
+        "g": "a45c305e31a9c284",
         "name": "INSERT INTO diskspace",
         "field": "topic",
         "fieldType": "msg",
@@ -1062,15 +1064,15 @@
         "y": 1300,
         "wires": [
             [
-                "86420a3490d88b70"
+                "6b11751446374579"
             ]
         ]
     },
     {
-        "id": "2f8ae1db2caaf4b5",
+        "id": "17871c018f22da1b",
         "type": "template",
-        "z": "07d69e2a460a18da",
-        "g": "0fd78e353e4e133f",
+        "z": "5f485e062dc78bcc",
+        "g": "a45c305e31a9c284",
         "name": "INSERT INTO temperature",
         "field": "topic",
         "fieldType": "msg",
@@ -1082,15 +1084,15 @@
         "y": 1380,
         "wires": [
             [
-                "86420a3490d88b70"
+                "6b11751446374579"
             ]
         ]
     },
     {
-        "id": "d4c75776214e3848",
+        "id": "50b7f46eb29fae57",
         "type": "comment",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "for monitoring out going MQTT msgs",
         "info": "",
         "x": 810,
@@ -1098,10 +1100,10 @@
         "wires": []
     },
     {
-        "id": "a18e2683064c84df",
+        "id": "b11161c1b0933093",
         "type": "comment",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "These are the commands for testing",
         "info": "",
         "x": 280,
@@ -1109,10 +1111,10 @@
         "wires": []
     },
     {
-        "id": "eef7f3ce393c51f7",
+        "id": "c5f92639b96c30cb",
         "type": "comment",
-        "z": "07d69e2a460a18da",
-        "g": "003022e90c876f9e",
+        "z": "5f485e062dc78bcc",
+        "g": "67ac0672a9e813bd",
         "name": "Error Collection",
         "info": "",
         "x": 920,
@@ -1120,10 +1122,10 @@
         "wires": []
     },
     {
-        "id": "f7272b9b05a6da2d",
+        "id": "f533176ac7842ee6",
         "type": "comment",
-        "z": "07d69e2a460a18da",
-        "g": "0fd78e353e4e133f",
+        "z": "5f485e062dc78bcc",
+        "g": "a45c305e31a9c284",
         "name": "Get the flow items and create the database inserts and store in tables",
         "info": "",
         "x": 390,
@@ -1131,23 +1133,23 @@
         "wires": []
     },
     {
-        "id": "710441d7a2ce2cc8",
+        "id": "0570b02e3a805150",
         "type": "ui_ui_control",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "events": "all",
         "x": 180,
         "y": 1720,
         "wires": [
             [
-                "ec01a4d03c898a78"
+                "03733be6f8d03811"
             ]
         ]
     },
     {
-        "id": "24f0c9dab10d3a60",
+        "id": "699311816a694900",
         "type": "ui_template",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "group": "9113425422938f2e",
         "name": "CSS for colors2",
         "order": 2,
@@ -1166,9 +1168,9 @@
         ]
     },
     {
-        "id": "8cde48d0bf8c3e17",
+        "id": "0dddf9926dd8da14",
         "type": "change",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "No data available",
         "rules": [
             {
@@ -1188,20 +1190,20 @@
         "y": 1720,
         "wires": [
             [
-                "46369cc7615923fa"
+                "ea12c3583f378021"
             ]
         ]
     },
     {
-        "id": "505280ddb83b2ce6",
+        "id": "30dc076e6da6a658",
         "type": "ui_template",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "group": "9113425422938f2e",
         "name": "Raspberry Pi devices2",
         "order": 1,
         "width": "12",
         "height": "10",
-        "format": "<div id=\"et_home\">\n<h2 style=\"text-align: center;\">PyPI Display Home </h2>\n<p style=\"text-align: center;\">List of Raspberry Pi's found on your LAN<p>\n<p style=\"text-align: center;\">Click on a 'Hostname' will get you details of that device<p>\n<p style=\"text-align: center;\">Click on a 'IP' will attempt to open Node-RED on that Pi<p>\n\n<br/>\n<table id=\"table\" border=\"1\">\n    <tr>\n        <th>Hostname</th> \n        <th>IP</th> \n        <th>Last Seen</th> \n        <th>Model</th>\n        <th>OS</th>\n        <th>Disk Used</th>\n        <th>Temperature</th>\n    </tr>\n    <tbody style=\"text-align: center\">\n        <tr ng-repeat=\"x in msg.payload\">\n            <td ng-if=\"x.device_status ==  'database is empty'\" class=\"warning_red\" >DATABASE IS EMPTY</td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"> \n                <md-button ng-click=\"send({host: x.hostname})\">{{x.hostname}}</md-button>\n            </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\"> \n                <md-button ng-click=\"send({host: x.hostname})\">{{x.hostname}}</md-button>\n            </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\" ><a href=\"http://{{x.ip}}:1880\" target=\"_blank\"> {{x.ip}} </a></td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >        {{x.ip}}</td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.last_seen_text}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.last_seen_text}} </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.model}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.model}} </td>\n\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.osrelease}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.osrelease}} </td>\n\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.disk_percentused}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.disk_percentused}} </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.temperature}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.temperature}} </td>\n\n         </tr>\n    </tbody>\n</table>\n\n</div>",
+        "format": "<div id=\"et_home\">\n<h2 style=\"text-align: center;\">PyPI Display Home </h2>\n<p style=\"text-align: center;\">List of Raspberry Pi's found on your LAN<p>\n<p style=\"text-align: center;\">Click on a 'Hostname' will get you details of that device<p>\n<p style=\"text-align: center;\">Click on a 'IP' will attempt to open Node-RED on that Pi<p>\n\n<br/>\n<table id=\"table\" border=\"1\">\n    <tr>\n        <th>Hostname</th> \n        <th>IP</th> \n        <th>Last Seen</th> \n        <th>Model</th>\n        <th>OS</th>\n        <th>Disk Used</th>\n        <th>Temperature</th>\n    </tr>\n    <tbody style=\"text-align: center\">\n        <tr ng-repeat=\"x in msg.payload\">\n            <td ng-if=\"x.device_status ==  'database is empty'\" class=\"warning_red\" >DATABASE IS EMPTY</td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\" style=\"text-align: left\"> \n                <md-button ng-click=\"send({host: x.hostname})\">{{x.hostname}}</md-button>\n            </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" style=\"text-align: left\"> \n                <md-button ng-click=\"send({host: x.hostname})\">{{x.hostname}}</md-button>\n            </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\" ><a href=\"http://{{x.ip}}:1880\" target=\"_blank\"> {{x.ip}} </a></td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >        {{x.ip}}</td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.last_seen_text}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.last_seen_text}} </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.model}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.model}} </td>\n\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.osrelease}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.osrelease}} </td>\n\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.disk_percentused}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.disk_percentused}} </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.temperature}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.temperature}} </td>\n\n         </tr>\n    </tbody>\n</table>\n\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -1211,15 +1213,15 @@
         "y": 1800,
         "wires": [
             [
-                "268ca1b3e72d8a10",
-                "c3e15a6ca759c0ff"
+                "cb401f40730115bb",
+                "a099a015744110e8"
             ]
         ]
     },
     {
-        "id": "46369cc7615923fa",
+        "id": "ea12c3583f378021",
         "type": "ui_toast",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "d": true,
         "position": "dialog",
         "displayTime": "3",
@@ -1239,9 +1241,9 @@
         ]
     },
     {
-        "id": "ec01a4d03c898a78",
+        "id": "03733be6f8d03811",
         "type": "function",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "Setup data for main dashboard",
         "func": "let payloads = msg.payload\n\n// get the list of known hosts \nlet hosts = flow.get(\"hostnames\")||[]\n\nlet data = {}\nlet mem = {}\nlet disk = {}\nconst hostArray =[] // this will be sent to the dashboard\n\n// combine all flow.\"hostname\" objects into one\nhosts.forEach(hostname => {\n    var piData = flow.get(hostname)||{}\n    piData.device_status = 1  // set pi status to active\n\n    // convert last_seen to a string and add it to object\n    let d = new Date(piData.last_seen);\n    let last_seen_time = d.getTime();\n    piData.last_seen_text = d.toLocaleString(\"en-US\")\n\n    // get current time - 10 minutes\n    var interval_limit = new Date().getTime() - 600000;\n\n    // if pi hasn't been seen in over an hour set status out of service\n    if (interval_limit > last_seen_time) piData.device_status = 0\n\n    piData.disk_percentused = piData.disk_percentused\n\n    // push the host data into data array tobe sent to the ui-template\n    hostArray.push(piData)\n    });\n\nmsg.payload = hostArray\n\n\nreturn msg;",
         "outputs": 1,
@@ -1253,14 +1255,14 @@
         "y": 1700,
         "wires": [
             [
-                "505280ddb83b2ce6"
+                "30dc076e6da6a658"
             ]
         ]
     },
     {
-        "id": "6a80e8244c27761b",
+        "id": "242d73396fab4958",
         "type": "inject",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "props": [
             {
@@ -1282,17 +1284,17 @@
         "y": 1640,
         "wires": [
             [
-                "ec01a4d03c898a78",
-                "b343d19acdde2a94"
+                "03733be6f8d03811",
+                "f30a56c9baa36f37"
             ]
         ]
     },
     {
-        "id": "268ca1b3e72d8a10",
+        "id": "cb401f40730115bb",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1305,13 +1307,13 @@
         "wires": []
     },
     {
-        "id": "c7dc9a8193f4d710",
+        "id": "eb2e336937ed624b",
         "type": "link in",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "Update Dashboard",
         "links": [
-            "3058d3cf59fa0d07",
-            "4d05e533fc214a78",
+            "4580c3770f462b87",
+            "f203c0a72762d6d2",
             "2c32eda9695f32d7",
             "2862d666b212a15f"
         ],
@@ -1319,15 +1321,15 @@
         "y": 1680,
         "wires": [
             [
-                "710441d7a2ce2cc8"
+                "0570b02e3a805150"
             ]
         ],
         "l": true
     },
     {
-        "id": "41e09307455568f8",
+        "id": "aeb5432b5c2c8f55",
         "type": "ui_button",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "group": "9113425422938f2e",
         "order": 3,
@@ -1348,14 +1350,14 @@
         "y": 1760,
         "wires": [
             [
-                "ec01a4d03c898a78"
+                "03733be6f8d03811"
             ]
         ]
     },
     {
-        "id": "43bab234d19299ec",
+        "id": "0d829875b68bbc88",
         "type": "mqtt in",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "topic": "pypi_info/results/#",
         "qos": "2",
@@ -1369,15 +1371,15 @@
         "y": 720,
         "wires": [
             [
-                "3f473041a19755ba",
-                "762682e95fb97373"
+                "6ccf2de721f26011",
+                "fdad584e655c508f"
             ]
         ]
     },
     {
-        "id": "e96243ba217a1be9",
+        "id": "d3eb43a768dbbde3",
         "type": "change",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "payload = stdout",
         "rules": [
             {
@@ -1398,15 +1400,15 @@
         "y": 860,
         "wires": [
             [
-                "5884c31d823950a9",
-                "66d63b61d3a81185"
+                "62535e6d8781179e",
+                "835657f52c530633"
             ]
         ]
     },
     {
-        "id": "5884c31d823950a9",
+        "id": "62535e6d8781179e",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -1421,9 +1423,9 @@
         "wires": []
     },
     {
-        "id": "8f92d39170a6a25a",
+        "id": "a44a9853afac48db",
         "type": "change",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "payload = not installed",
         "rules": [
             {
@@ -1443,14 +1445,14 @@
         "y": 820,
         "wires": [
             [
-                "162ffaeb1e1d51e6"
+                "1193370557e21007"
             ]
         ]
     },
     {
-        "id": "2b70250bbdad95fb",
+        "id": "43a4f53c2735ffdb",
         "type": "switch",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "stdout empty?",
         "property": "payload.stdout",
         "propertyType": "msg",
@@ -1469,17 +1471,17 @@
         "y": 840,
         "wires": [
             [
-                "8f92d39170a6a25a"
+                "a44a9853afac48db"
             ],
             [
-                "e96243ba217a1be9"
+                "d3eb43a768dbbde3"
             ]
         ]
     },
     {
-        "id": "162ffaeb1e1d51e6",
+        "id": "1193370557e21007",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "NOT FOUND",
         "active": false,
         "tosidebar": true,
@@ -1494,9 +1496,9 @@
         "wires": []
     },
     {
-        "id": "069805d859bda384",
+        "id": "8b142d9d4a76cd19",
         "type": "change",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "set msg.hostname and msg.command",
         "rules": [
             {
@@ -1523,14 +1525,14 @@
         "y": 780,
         "wires": [
             [
-                "2b70250bbdad95fb"
+                "43a4f53c2735ffdb"
             ]
         ]
     },
     {
-        "id": "52321191a09e2259",
+        "id": "26bbec5cc897dc70",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "Parsed results",
         "active": true,
         "tosidebar": true,
@@ -1545,9 +1547,9 @@
         "wires": []
     },
     {
-        "id": "e7264cd01ed3ad4f",
+        "id": "74c16f398d13db2e",
         "type": "function",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "Parse Piinfo",
         "func": "// This function will build a piinfo table entry once all\n// the required data has has been  received\nlet hostname = msg.hostname\nlet command = msg.command\nlet payload = msg.payload\nlet host = flow.get(hostname)||{}\nlet items = 0\n\nif(host.hasOwnProperty(\"ip\")) items++\nif(host.hasOwnProperty(\"model\")) items++\nif(host.hasOwnProperty(\"disk_percentused\")) items++\nif(host.hasOwnProperty(\"uptime\")) items++\nif(host.hasOwnProperty(\"temperature\")) items++\n\n// format commands that have extra text in their responses\nswitch(command) {\n   case \"hostname\":\n        payload = hostname;\n        items--\n        break;\n\n     case \"ip\":\n        payload = payload.replace(/ \\n/g, '');\n        break;\n\n    case \"last_seen\":\n        payload = Date.parse(payload);\n        break;\n\n    case \"model\":\n        payload = payload.slice(0, -1);\n        payload = payload.toString();\n        payload = payload.replace(\"Raspberry \",\"\");\n        break;\n \n    case \"osrelease\":\n        payload = payload.replace('Codename:', '');\n        payload = payload.trim();\n        break;\n \n    case \"temperature\":\n        payload = payload.split(\"=\")[1];\n        payload = payload.replace(/\\n/g,\"\");\n        payload = payload.replace(\"'C\", \"\");\n        payload = parseFloat(payload)\n        break;\n\n    case \"uptime\":\n        payload = payload.replace(/[\\r\\n]+/gm, \"\");\n        break;\n\n    default:\n        break;\n}\n\nconst d1 = new Date();\nhost['last_seen']   = d1.getTime();\n\nmsg.payload = payload\nhost[command] = payload;\n//node.warn(host)\nflow.set(hostname, host)\nmsg.data = host\n\n//if all items found, write out the piinfo record\nif (items < 5) return\nreturn msg;",
         "outputs": 1,
@@ -1559,15 +1561,15 @@
         "y": 820,
         "wires": [
             [
-                "52321191a09e2259",
-                "5e8d29599a4a710a"
+                "26bbec5cc897dc70",
+                "8e2cab98cbb3416f"
             ]
         ]
     },
     {
-        "id": "3f36aa6dd430f195",
+        "id": "191977eb95072ed0",
         "type": "comment",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "Parse the results returned from MQTT and store ther results in some flow variables",
         "info": "",
         "x": 510,
@@ -1575,10 +1577,10 @@
         "wires": []
     },
     {
-        "id": "96a45c4640a5927d",
+        "id": "d57160dfbd21a0a2",
         "type": "function",
-        "z": "07d69e2a460a18da",
-        "g": "fc0df6321866cd1f",
+        "z": "5f485e062dc78bcc",
+        "g": "ce8d0c70b33c0823",
         "name": "Format MQTT topic/data",
         "func": "const cmds = msg.payload;\n//Object.values(cmds).forEach( cmd => {\n//  msg.product = cmd;\n//  msg.payload = cmd;\n//  node.send(msg);\n//});\nObject.entries(cmds).forEach(entry => {\n  const [software, cmd] = entry;\n  msg.software = software;\n//  msg.payload = cmd;\n  msg.topic = 'pypi_info/command'+\"/\"+msg.software\n  node.send(msg);\n});\n\nreturn null;",
         "outputs": 1,
@@ -1590,16 +1592,16 @@
         "y": 620,
         "wires": [
             [
-                "033b7fb995c98daf",
-                "41270b81eec2eaa1"
+                "f134c76855d41ae1",
+                "3c2fa3d6b7682d85"
             ]
         ]
     },
     {
-        "id": "033b7fb995c98daf",
+        "id": "f134c76855d41ae1",
         "type": "mqtt out",
-        "z": "07d69e2a460a18da",
-        "g": "fc0df6321866cd1f",
+        "z": "5f485e062dc78bcc",
+        "g": "ce8d0c70b33c0823",
         "name": "",
         "topic": "",
         "qos": "",
@@ -1615,33 +1617,33 @@
         "wires": []
     },
     {
-        "id": "6af5f7c0afeff147",
+        "id": "57c3f2502f961849",
         "type": "link in",
-        "z": "07d69e2a460a18da",
-        "g": "fc0df6321866cd1f",
+        "z": "5f485e062dc78bcc",
+        "g": "ce8d0c70b33c0823",
         "name": "Run Command",
         "links": [
-            "791e1d16b4c171c6",
+            "d7ba2e7a7fe33a57",
             "4cdb05881444d3b0"
         ],
         "x": 320,
         "y": 620,
         "wires": [
             [
-                "96a45c4640a5927d"
+                "d57160dfbd21a0a2"
             ]
         ],
         "l": true
     },
     {
-        "id": "0a2b09b1adbdf331",
+        "id": "fb1d5bb61132322f",
         "type": "link out",
-        "z": "07d69e2a460a18da",
-        "g": "fc0df6321866cd1f",
+        "z": "5f485e062dc78bcc",
+        "g": "ce8d0c70b33c0823",
         "name": "to Load to SQLite",
         "mode": "link",
         "links": [
-            "b031b3b48f87bc3d"
+            "1bb50e9f0cc50c5e"
         ],
         "x": 710,
         "y": 580,
@@ -1649,10 +1651,10 @@
         "l": true
     },
     {
-        "id": "eb820725f3582e55",
+        "id": "731d3cd6de6f3a33",
         "type": "comment",
-        "z": "07d69e2a460a18da",
-        "g": "fc0df6321866cd1f",
+        "z": "5f485e062dc78bcc",
+        "g": "ce8d0c70b33c0823",
         "name": "Publish commands to MQTT so devices with pypi-info installed will reply",
         "info": "",
         "x": 440,
@@ -1660,10 +1662,10 @@
         "wires": []
     },
     {
-        "id": "bc96487017b5fd2d",
+        "id": "48ab952841b6f55a",
         "type": "trigger",
-        "z": "07d69e2a460a18da",
-        "g": "fc0df6321866cd1f",
+        "z": "5f485e062dc78bcc",
+        "g": "ce8d0c70b33c0823",
         "name": "",
         "op1": "koad to sqlite",
         "op2": "0",
@@ -1681,14 +1683,14 @@
         "y": 580,
         "wires": [
             [
-                "0a2b09b1adbdf331"
+                "fb1d5bb61132322f"
             ]
         ]
     },
     {
-        "id": "e74496e0f9f653b1",
+        "id": "049add616b3a47c5",
         "type": "switch",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "payload empty?",
         "property": "payload",
         "propertyType": "msg",
@@ -1707,17 +1709,17 @@
         "y": 1740,
         "wires": [
             [
-                "8cde48d0bf8c3e17"
+                "0dddf9926dd8da14"
             ],
             [
-                "505280ddb83b2ce6"
+                "30dc076e6da6a658"
             ]
         ]
     },
     {
-        "id": "aebec645fe271770",
+        "id": "f169b6262831a6d6",
         "type": "comment",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "Get data from the flow variables and display it on the dashboard",
         "info": "",
         "x": 530,
@@ -1725,9 +1727,9 @@
         "wires": []
     },
     {
-        "id": "69920c97a9a96e6a",
+        "id": "961465da1905c03a",
         "type": "inject",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "delete FLOW context",
         "props": [
             {
@@ -1749,14 +1751,14 @@
         "y": 2020,
         "wires": [
             [
-                "d929fc93e69e6a94"
+                "512e118a554aab1e"
             ]
         ]
     },
     {
-        "id": "d929fc93e69e6a94",
+        "id": "512e118a554aab1e",
         "type": "function",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "func": "\n// get the list of known hosts \nlet hosts = flow.get(\"hostnames\")||[]\nnode.warn(hosts)\n//let data = {}\n//let mem = {}\n//let disk = {}\n\n// combine all flow.\"hostname\" objects into one\nhosts.forEach(hostname => {\n    var piData = flow.get(hostname)||{}\n    flow.set(hostname, undefined)    \n    \n});\n\nflow.set(\"hostnames\",undefined)\n\n\nreturn msg;",
         "outputs": 1,
@@ -1768,15 +1770,15 @@
         "y": 2020,
         "wires": [
             [
-                "8a814c3883cab450",
-                "22d3100218cc81fc"
+                "ea23b7b72a9aa748",
+                "fe9959a491833bf3"
             ]
         ]
     },
     {
-        "id": "f6c9c75a757e12ab",
+        "id": "7b2b2c67346e6140",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -1790,9 +1792,9 @@
         "wires": []
     },
     {
-        "id": "8a814c3883cab450",
+        "id": "ea23b7b72a9aa748",
         "type": "change",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "rules": [
             {
@@ -1810,18 +1812,18 @@
         "y": 2020,
         "wires": [
             [
-                "f6c9c75a757e12ab"
+                "7b2b2c67346e6140"
             ]
         ]
     },
     {
-        "id": "7e72270f6a715f9b",
+        "id": "a7317be7ca7a48e3",
         "type": "link out",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "to Pi Details",
         "mode": "link",
         "links": [
-            "92d41864b5695ada"
+            "903fdb51603f6e96"
         ],
         "x": 830,
         "y": 1840,
@@ -1829,9 +1831,9 @@
         "l": true
     },
     {
-        "id": "6ac23c32b01da97a",
+        "id": "869af44527e0b108",
         "type": "change",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "rules": [
             {
@@ -1851,14 +1853,14 @@
         "y": 1840,
         "wires": [
             [
-                "7e72270f6a715f9b"
+                "a7317be7ca7a48e3"
             ]
         ]
     },
     {
-        "id": "c3e15a6ca759c0ff",
+        "id": "a099a015744110e8",
         "type": "switch",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "property": "host",
         "propertyType": "msg",
@@ -1880,15 +1882,15 @@
         "wires": [
             [],
             [
-                "6ac23c32b01da97a"
+                "869af44527e0b108"
             ]
         ]
     },
     {
-        "id": "a876efd4da821745",
+        "id": "cb30d895e50ba973",
         "type": "template",
-        "z": "07d69e2a460a18da",
-        "g": "0fd78e353e4e133f",
+        "z": "5f485e062dc78bcc",
+        "g": "a45c305e31a9c284",
         "name": "REPLACE INTO software",
         "field": "topic",
         "fieldType": "msg",
@@ -1900,14 +1902,14 @@
         "y": 1420,
         "wires": [
             [
-                "86420a3490d88b70"
+                "6b11751446374579"
             ]
         ]
     },
     {
-        "id": "2f396a7b17b6f188",
+        "id": "58b987a861de2513",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -1922,11 +1924,11 @@
         "wires": []
     },
     {
-        "id": "3f473041a19755ba",
+        "id": "6ccf2de721f26011",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1939,9 +1941,9 @@
         "wires": []
     },
     {
-        "id": "66d63b61d3a81185",
+        "id": "835657f52c530633",
         "type": "switch",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "property": "topic",
         "propertyType": "msg",
@@ -2002,42 +2004,42 @@
         "y": 860,
         "wires": [
             [
-                "e7264cd01ed3ad4f"
+                "74c16f398d13db2e"
             ],
             [
-                "e7264cd01ed3ad4f"
+                "74c16f398d13db2e"
             ],
             [
-                "e7264cd01ed3ad4f"
+                "74c16f398d13db2e"
             ],
             [
-                "e7264cd01ed3ad4f",
-                "154cadb367161f1d"
+                "74c16f398d13db2e",
+                "dee84253b03a8b3d"
             ],
             [
-                "e7264cd01ed3ad4f"
+                "74c16f398d13db2e"
             ],
             [
-                "e7264cd01ed3ad4f"
+                "74c16f398d13db2e"
             ],
             [
-                "228fed797859109e"
+                "714291008366937c"
             ],
             [
-                "9a7fbe9fabf84c95"
+                "7e3bf793eda11a32"
             ],
             [
-                "b9d3b0242d0b47d2"
+                "95e4fcf9154e98c0"
             ],
             [
-                "48c2822bc71fb5f0"
+                "133310cc414df644"
             ]
         ]
     },
     {
-        "id": "b2e5233e50e81a43",
+        "id": "30a1e3300b66a76d",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "SOFTWARE",
         "active": false,
         "tosidebar": true,
@@ -2052,11 +2054,11 @@
         "wires": []
     },
     {
-        "id": "48c2822bc71fb5f0",
+        "id": "133310cc414df644",
         "type": "function",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "Parse Software",
-        "func": "// prep to store in software table\nlet release = msg.payload\n//let topic = msg.topic\nlet product = msg.command\n//let command = topic.split('/')[2]\nlet data = {}\n\n// extract release from results that have extra text in their responses\nswitch(product) {\n   case \"influx\":\n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[3];\n        break;\n\n    case \"mosquitto\":\n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[2];\n        break;\n \n    case \"netatalk\": \n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" -\")[0];\n        release = release.replace('netatalk ', '');\n        break;\n\n    case \"nodered\": \n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[1];\n        release = release.replace(\"v\",\"\");\n        break;\n\n    case \"nodejs\": \n        release = release.replace(/\\n/g,\"\");\n//        release = release.split(\" \")[1];\n        release = release.replace(\"v\",\"\");\n        break;\n\n    case \"osrelease\":\n        release = release.replace('Codename:', '');\n        release = release.trim();\n        break;\n \n    case \"php\":\n        release = release.replace(/\\n/g, '');\n        release = release.split(\" \")[1];\n        break;\n \n    case \"python3\":\n        release = release.replace(/\\n/g, '');\n        release = release.replace('Python ', '');\n        break;\n \n    case \"sqlite3\":\n        release = release.split(\" \")[0];\n        break;\n\n    default:\n        break;\n}\n\nconst d1 = new Date();\n\nmsg.payload = ''\ndata.hostname = msg.hostname\ndata.last_seen = d1.getTime();\ndata.product  = msg.command\ndata.release  = release\n\nmsg.data = data\nreturn msg;",
+        "func": "// prep to store in software table\nlet release = msg.payload\n//let topic = msg.topic\nlet product = msg.command\n//let command = topic.split('/')[2]\nlet data = {}\n\n// extract release from results that have extra text in their responses\nswitch(product) {\n   case \"grafana\":\n        release = release.split(\"(\");\n        release = release[0].split(\" \");\n        release = release[1];\n        break;\n\n   case \"influx\":\n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[3];\n        break;\n\n    case \"mosquitto\":\n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[2];\n        break;\n \n    case \"netatalk\": \n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" -\")[0];\n        release = release.replace('netatalk ', '');\n        break;\n\n    case \"nodered\": \n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[1];\n        release = release.replace(\"v\",\"\");\n        break;\n\n    case \"nodejs\": \n        release = release.replace(/\\n/g,\"\");\n//        release = release.split(\" \")[1];\n        release = release.replace(\"v\",\"\");\n        break;\n\n    case \"osrelease\":\n        release = release.replace('Codename:', '');\n        release = release.trim();\n        break;\n \n    case \"php\":\n        release = release.replace(/\\n/g, '');\n        release = release.split(\" \")[1];\n        release = release.split(\"~\")[0];\n        break;\n \n    case \"python3\":\n        release = release.replace(/\\n/g, '');\n        release = release.replace('Python ', '');\n        break;\n \n    case \"sqlite3\":\n        release = release.split(\" \")[0];\n        break;\n\n    default:\n        break;\n}\n\nconst d1 = new Date();\n\nmsg.payload = ''\ndata.hostname = msg.hostname\ndata.last_seen = d1.getTime();\ndata.product  = msg.command\ndata.release  = release\n\nmsg.data = data\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2066,15 +2068,15 @@
         "y": 980,
         "wires": [
             [
-                "b2e5233e50e81a43",
-                "a876efd4da821745"
+                "30a1e3300b66a76d",
+                "cb30d895e50ba973"
             ]
         ]
     },
     {
-        "id": "228fed797859109e",
+        "id": "714291008366937c",
         "type": "function",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "Parse Disk Space",
         "func": "// memory to store in DB\nlet payload = msg.payload\nlet data = {}\ndata.hostname = msg.hostname\nlet host = flow.get(msg.hostname)||{}\n\npayload               = payload.replace(/  +/g, ' ');\npayload               = payload.split(\" \");\ndata.disk_size        = parseInt(payload[7]);\ndata.disk_used        = parseInt(payload[8]);\ndata.disk_avaliable   = parseInt(payload[9]);\ndata.disk_percentused = payload[10];\n\nconst d1 = new Date();\nlet last_seen = d1.getTime();\ndata.last_seen   = last_seen\nhost.disk_percentused = payload[10]\n\nflow.set(msg.hostname, host)\n\nmsg.data = data\nreturn msg;",
         "outputs": 1,
@@ -2086,15 +2088,15 @@
         "y": 860,
         "wires": [
             [
-                "8aded5205a7f9478",
-                "41929e53c3e4dd14"
+                "4510f6bac14d16a7",
+                "924cb49b76863651"
             ]
         ]
     },
     {
-        "id": "9a7fbe9fabf84c95",
+        "id": "7e3bf793eda11a32",
         "type": "function",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "Parse Memory",
         "func": "// model to store in DB\nlet data = {}\nlet payload = msg.payload\n\ndata.hostname = msg.hostname\nconst d1 = new Date();\ndata.last_seen   = d1.getTime();\n\npayload = payload.replace(/\\n/g,\" \");\npayload = payload.replace(/  +/g, ' ');\npayload = payload.split(\" \");\ndata.mem_total      = parseInt(payload[8]);\ndata.mem_used       = parseInt(payload[9]);\ndata.mem_free       = parseInt(payload[10]);\ndata.mem_shared     = parseInt(payload[11]);\ndata.mem_buff_cache = parseInt(payload[12]);\ndata.mem_available  = parseInt(payload[13]);\ndata.used_total     = parseInt(payload[15]);\ndata.used_free      = parseInt(payload[16]);\ndata.used_swap      = parseInt(payload[17]);\n\nmsg.data = data\nreturn msg;",
         "outputs": 1,
@@ -2106,15 +2108,15 @@
         "y": 900,
         "wires": [
             [
-                "2e1e2ff65e58f627",
-                "41929e53c3e4dd14"
+                "34ef594d9f41cec4",
+                "924cb49b76863651"
             ]
         ]
     },
     {
-        "id": "d6d4a3d92caf7a25",
+        "id": "93e59022abb78dea",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "PIINFO",
         "active": true,
         "tosidebar": true,
@@ -2129,9 +2131,9 @@
         "wires": []
     },
     {
-        "id": "b9d3b0242d0b47d2",
+        "id": "95e4fcf9154e98c0",
         "type": "function",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "Parse Temperature",
         "func": "// prep to store in software table\nlet payload = msg.payload\nlet data = {}\nlet hostname = msg.hostname\nlet host = flow.get(hostname)||{}\n\npayload = payload.split(\"=\")[1];\npayload = payload.replace(/\\n/g,\"\");\npayload = payload.replace(\"'C\", \"\");\npayload = parseFloat(payload)\n \n\nconst d1 = new Date();\n//msg.payload = ''\ndata.hostname    = msg.hostname\ndata.last_seen   = d1.getTime();\ndata.temperature = payload\nhost.temperature = payload\nflow.set(hostname, host)\nmsg.data = data\nreturn msg;",
         "outputs": 1,
@@ -2143,14 +2145,14 @@
         "y": 940,
         "wires": [
             [
-                "2f8ae1db2caaf4b5"
+                "17871c018f22da1b"
             ]
         ]
     },
     {
-        "id": "41929e53c3e4dd14",
+        "id": "924cb49b76863651",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -2165,9 +2167,9 @@
         "wires": []
     },
     {
-        "id": "154cadb367161f1d",
+        "id": "dee84253b03a8b3d",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -2182,26 +2184,26 @@
         "wires": []
     },
     {
-        "id": "17aeaecd71857b30",
+        "id": "ca5126ed407d8059",
         "type": "link call",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "links": [
-            "0ff77c6b9b60dfa0"
+            "84786ba3a93fab15"
         ],
         "timeout": "30",
         "x": 610,
         "y": 1660,
         "wires": [
             [
-                "190bee442cd48f1e"
+                "40b8a39710f5f2b5"
             ]
         ]
     },
     {
-        "id": "8447eb3a803f9a19",
+        "id": "2e1965f8b492ac30",
         "type": "link out",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "mode": "return",
         "links": [],
@@ -2211,24 +2213,24 @@
         "l": true
     },
     {
-        "id": "0ff77c6b9b60dfa0",
+        "id": "84786ba3a93fab15",
         "type": "link in",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "SQL",
         "links": [],
         "x": 190,
         "y": 1940,
         "wires": [
             [
-                "058886d0f955b6cb"
+                "56067af27aa5ae1b"
             ]
         ],
         "l": true
     },
     {
-        "id": "b343d19acdde2a94",
+        "id": "f30a56c9baa36f37",
         "type": "change",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "rules": [
             {
@@ -2248,14 +2250,14 @@
         "y": 1660,
         "wires": [
             [
-                "17aeaecd71857b30"
+                "ca5126ed407d8059"
             ]
         ]
     },
     {
-        "id": "190bee442cd48f1e",
+        "id": "40b8a39710f5f2b5",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -2270,10 +2272,10 @@
         "wires": []
     },
     {
-        "id": "42f720ad5e39b6ea",
+        "id": "02fdd151761b82f5",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "fc0df6321866cd1f",
+        "z": "5f485e062dc78bcc",
+        "g": "ce8d0c70b33c0823",
         "name": "Device info (5 min)",
         "props": [
             {
@@ -2291,14 +2293,14 @@
         "y": 520,
         "wires": [
             [
-                "96a45c4640a5927d"
+                "d57160dfbd21a0a2"
             ]
         ]
     },
     {
-        "id": "22d3100218cc81fc",
+        "id": "fe9959a491833bf3",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -2312,10 +2314,10 @@
         "wires": []
     },
     {
-        "id": "92e4c364240a27eb",
+        "id": "574ce6bdb578c561",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "fc0df6321866cd1f",
+        "z": "5f485e062dc78bcc",
+        "g": "ce8d0c70b33c0823",
         "name": "all commands (1 HR)",
         "props": [
             {
@@ -2337,14 +2339,14 @@
         "y": 560,
         "wires": [
             [
-                "96a45c4640a5927d"
+                "d57160dfbd21a0a2"
             ]
         ]
     },
     {
-        "id": "41270b81eec2eaa1",
+        "id": "3c2fa3d6b7682d85",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "debug 1",
         "active": false,
         "tosidebar": true,
@@ -2358,10 +2360,10 @@
         "wires": []
     },
     {
-        "id": "86420a3490d88b70",
+        "id": "6b11751446374579",
         "type": "sqlite",
-        "z": "07d69e2a460a18da",
-        "g": "0fd78e353e4e133f",
+        "z": "5f485e062dc78bcc",
+        "g": "a45c305e31a9c284",
         "mydb": "d54830887efaf336",
         "sqlquery": "msg.topic",
         "sql": "",
@@ -2370,15 +2372,15 @@
         "y": 1340,
         "wires": [
             [
-                "3058d3cf59fa0d07",
-                "b46c045a24dc2b1f"
+                "4580c3770f462b87",
+                "6587326747cf44c5"
             ]
         ]
     },
     {
-        "id": "058886d0f955b6cb",
+        "id": "56067af27aa5ae1b",
         "type": "sqlite",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "mydb": "d54830887efaf336",
         "sqlquery": "msg.topic",
         "sql": "select * from piinfo where hostname = {{msg.payload}};",
@@ -2387,15 +2389,15 @@
         "y": 1940,
         "wires": [
             [
-                "8447eb3a803f9a19"
+                "2e1965f8b492ac30"
             ]
         ]
     },
     {
-        "id": "a29e08fc28db688b",
+        "id": "a4bd1a6ad85927ea",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "nodejs",
         "props": [
             {
@@ -2417,15 +2419,15 @@
         "y": 200,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "2821718dc9f61623",
+        "id": "495e5cb28a71bf40",
         "type": "inject",
-        "z": "07d69e2a460a18da",
-        "g": "ca9026e3044635be",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
         "name": "uptime",
         "props": [
             {
@@ -2447,31 +2449,31 @@
         "y": 260,
         "wires": [
             [
-                "791e1d16b4c171c6"
+                "d7ba2e7a7fe33a57"
             ]
         ]
     },
     {
-        "id": "3efe3106ba02abf6",
+        "id": "a8443f7abba10aba",
         "type": "function",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "Build flow.hostnames array",
-        "func": "// get the hostnames array from context\nlet hostnames = flow.get('hostnames')||[]\n\n// get current hostname\nlet hostname = msg.payload.hostname\n\n// push the current name onto the array\nhostnames.push(hostname);\n\n// remove duplicate hostnames\nlet uniqueNames = [...new Set(hostnames)];\n\n// save the hostnames array)\nflow.set('hostnames', uniqueNames)\nhostnames = flow.get('hostnames')\n\nreturn;",
+        "func": "// get the hostnames array from context\nlet hostnames = flow.get('hostnames')||[]\n\n// get current hostname\nlet hostname = msg.payload.hostname\n\n// push the current name onto the array\nhostnames.push(hostname);\nhostnames.sort();\n\n// remove duplicate hostnames\nlet uniqueNames = [...new Set(hostnames)];\n\n// save the hostnames array)\nflow.set('hostnames', uniqueNames)\nhostnames = flow.get('hostnames')\n\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1100,
-        "y": 700,
+        "x": 740,
+        "y": 720,
         "wires": [
             []
         ]
     },
     {
-        "id": "762682e95fb97373",
+        "id": "fdad584e655c508f",
         "type": "switch",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "property": "payload.command",
         "propertyType": "msg",
@@ -2487,30 +2489,39 @@
                 "vt": "str"
             },
             {
+                "t": "eq",
+                "v": "hostname",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 3,
+        "outputs": 4,
         "x": 490,
         "y": 720,
         "wires": [
             [
-                "b59d16c8f4bb4fd7"
+                "a23badf739f22c6b"
             ],
             [
-                "75e6ee9a8d754da0"
+                "4c915de405444c8c"
             ],
             [
-                "069805d859bda384"
+                "a8443f7abba10aba",
+                "8b142d9d4a76cd19"
+            ],
+            [
+                "8b142d9d4a76cd19"
             ]
         ]
     },
     {
-        "id": "75e6ee9a8d754da0",
+        "id": "4c915de405444c8c",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -2520,14 +2531,14 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 870,
+        "x": 970,
         "y": 740,
         "wires": []
     },
     {
-        "id": "b59d16c8f4bb4fd7",
+        "id": "a23badf739f22c6b",
         "type": "debug",
-        "z": "07d69e2a460a18da",
+        "z": "5f485e062dc78bcc",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -2537,14 +2548,43 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 870,
+        "x": 970,
         "y": 700,
         "wires": []
     },
     {
-        "id": "3ddc272c833ba419",
+        "id": "658149d29f2b2f80",
+        "type": "inject",
+        "z": "5f485e062dc78bcc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.hostname",
+                "v": "unusedpi",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 810,
+        "y": 760,
+        "wires": [
+            [
+                "a8443f7abba10aba"
+            ]
+        ]
+    },
+    {
+        "id": "0c99b846d819e585",
         "type": "comment",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "This flow grabs the stored data and displays it.",
         "info": "",
         "x": 440,
@@ -2552,25 +2592,25 @@
         "wires": []
     },
     {
-        "id": "e91778ea5cd94b79",
+        "id": "734195eefb23e1ab",
         "type": "ui_ui_control",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "events": "all",
         "x": 560,
         "y": 200,
         "wires": [
             [
-                "538e5e0b4c33fc72",
-                "9d3944a0ef36308f"
+                "8427576129d14cd9",
+                "b31ae47fb9d4a539"
             ]
         ]
     },
     {
-        "id": "999b85f7fc36c282",
+        "id": "9f4171ea7206edbd",
         "type": "ui_template",
-        "z": "53ac84143b97ee93",
-        "group": "d3b0dfd8ac758638",
+        "z": "c4ddbef3c7b4c989",
+        "group": "556d80d4ed6e0469",
         "name": "CSS for Pi details",
         "order": 22,
         "width": 0,
@@ -2588,10 +2628,10 @@
         ]
     },
     {
-        "id": "019bf2f9524a97d9",
+        "id": "3192703242c4ab5b",
         "type": "ui_template",
-        "z": "53ac84143b97ee93",
-        "group": "d3b0dfd8ac758638",
+        "z": "c4ddbef3c7b4c989",
+        "group": "556d80d4ed6e0469",
         "name": "Show Pi details",
         "order": 2,
         "width": "8",
@@ -2606,14 +2646,14 @@
         "y": 680,
         "wires": [
             [
-                "7d98a85ac49cc41d"
+                "3bf7e8d1c017b182"
             ]
         ]
     },
     {
-        "id": "f285f29d4076a6fc",
+        "id": "5b8acf9663cdbc60",
         "type": "function",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "Setup data for Details ",
         "func": "let piinfo = msg.piinfo[0]\n\n// convert last_seen to a string and add it to object\nlet d = new Date(piinfo.last_seen);\npiinfo.last_seen_text = d.toLocaleString(\"en-US\")\n\n// get current time - 10 minutes\nvar interval_limit = new Date().getTime() - 600000;\n\npiinfo.device_status = 1\n\n// if pi hasn't been seen in more than the interval, set status out of service\nif (interval_limit > piinfo.last_seen) piinfo.device_status = 0\n\n\nmsg.piinfo[0] = piinfo\n\nreturn msg;",
         "outputs": 1,
@@ -2625,15 +2665,15 @@
         "y": 620,
         "wires": [
             [
-                "be945c4967fb0f53",
-                "019bf2f9524a97d9"
+                "e5c96e9da8edbd9d",
+                "3192703242c4ab5b"
             ]
         ]
     },
     {
-        "id": "7d98a85ac49cc41d",
+        "id": "3bf7e8d1c017b182",
         "type": "debug",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -2648,11 +2688,11 @@
         "wires": []
     },
     {
-        "id": "b358f0aa9c5bc7c3",
+        "id": "7bf10a0eac722154",
         "type": "ui_button",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
-        "group": "d3b0dfd8ac758638",
+        "group": "556d80d4ed6e0469",
         "order": 23,
         "width": "8",
         "height": "1",
@@ -2671,14 +2711,14 @@
         "y": 900,
         "wires": [
             [
-                "4d05e533fc214a78"
+                "f203c0a72762d6d2"
             ]
         ]
     },
     {
-        "id": "48c4c7d87965ee6a",
+        "id": "e37238aed9f45bb1",
         "type": "catch",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "scope": null,
         "uncaught": false,
@@ -2686,14 +2726,14 @@
         "y": 80,
         "wires": [
             [
-                "14f6b70388740986"
+                "3c401465dc08a3c8"
             ]
         ]
     },
     {
-        "id": "14f6b70388740986",
+        "id": "3c401465dc08a3c8",
         "type": "debug",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -2706,9 +2746,9 @@
         "wires": []
     },
     {
-        "id": "be945c4967fb0f53",
+        "id": "e5c96e9da8edbd9d",
         "type": "debug",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -2721,9 +2761,9 @@
         "wires": []
     },
     {
-        "id": "566397c081cdb9de",
+        "id": "9f314facdb870efb",
         "type": "change",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "piInfo",
         "rules": [
             {
@@ -2750,33 +2790,33 @@
         "y": 320,
         "wires": [
             [
-                "ed31fa240d1e6339"
+                "ae01cd28e6291df7"
             ]
         ]
     },
     {
-        "id": "92d41864b5695ada",
+        "id": "903fdb51603f6e96",
         "type": "link in",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "Pi Details",
         "links": [
-            "7e72270f6a715f9b"
+            "a7317be7ca7a48e3"
         ],
         "x": 320,
         "y": 180,
         "wires": [
             [
-                "cc822db2244cdbba",
-                "e91778ea5cd94b79",
-                "566397c081cdb9de"
+                "4db94395a404a129",
+                "734195eefb23e1ab",
+                "9f314facdb870efb"
             ]
         ],
         "l": true
     },
     {
-        "id": "538e5e0b4c33fc72",
+        "id": "8427576129d14cd9",
         "type": "debug",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -2789,24 +2829,24 @@
         "wires": []
     },
     {
-        "id": "147718afa0135ed8",
+        "id": "9f2cb24f15eea024",
         "type": "link out",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "sqlnode return",
         "mode": "return",
         "links": [],
-        "x": 860,
+        "x": 940,
         "y": 1060,
         "wires": [],
         "l": true
     },
     {
-        "id": "ed31fa240d1e6339",
+        "id": "ae01cd28e6291df7",
         "type": "link call",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "call sql node",
         "links": [
-            "95da72028cf9cd2f"
+            "53b5921cb08c5e83"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -2814,29 +2854,29 @@
         "y": 320,
         "wires": [
             [
-                "5659d093c533e75c"
+                "effbf91fcb3fd62c"
             ]
         ]
     },
     {
-        "id": "95da72028cf9cd2f",
+        "id": "53b5921cb08c5e83",
         "type": "link in",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "sqlnode",
         "links": [],
         "x": 310,
         "y": 1060,
         "wires": [
             [
-                "a78ce03b397a859d"
+                "2bc160383d88bbdb"
             ]
         ],
         "l": true
     },
     {
-        "id": "5659d093c533e75c",
+        "id": "effbf91fcb3fd62c",
         "type": "change",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "rules": [
             {
@@ -2846,6 +2886,11 @@
                 "to": "payload",
                 "tot": "msg",
                 "dc": true
+            },
+            {
+                "t": "delete",
+                "p": "topic",
+                "pt": "msg"
             }
         ],
         "action": "",
@@ -2857,17 +2902,17 @@
         "y": 320,
         "wires": [
             [
-                "fdcee3b4a0ca0c21",
-                "c8461bbbb2a749c9"
+                "be2aaf2505c9ccd2",
+                "f1140d4671eb769b"
             ]
         ]
     },
     {
-        "id": "fdcee3b4a0ca0c21",
+        "id": "be2aaf2505c9ccd2",
         "type": "debug",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2878,9 +2923,9 @@
         "wires": []
     },
     {
-        "id": "9f5f6284069a7b3c",
+        "id": "2e163ab404c73f72",
         "type": "change",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "memory",
         "rules": [
             {
@@ -2907,17 +2952,17 @@
         "y": 440,
         "wires": [
             [
-                "bb0bd108d68ba251"
+                "4569422f910f9061"
             ]
         ]
     },
     {
-        "id": "bb0bd108d68ba251",
+        "id": "4569422f910f9061",
         "type": "link call",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "call sql node",
         "links": [
-            "95da72028cf9cd2f"
+            "53b5921cb08c5e83"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -2925,14 +2970,14 @@
         "y": 440,
         "wires": [
             [
-                "535de036cac75e4f"
+                "064ba9470fd1af31"
             ]
         ]
     },
     {
-        "id": "535de036cac75e4f",
+        "id": "064ba9470fd1af31",
         "type": "change",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "rules": [
             {
@@ -2942,6 +2987,11 @@
                 "to": "payload",
                 "tot": "msg",
                 "dc": true
+            },
+            {
+                "t": "delete",
+                "p": "topic",
+                "pt": "msg"
             }
         ],
         "action": "",
@@ -2949,19 +2999,19 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 720,
         "y": 440,
         "wires": [
             [
-                "af9f19468bdd9008",
-                "52c90be2130f98fe"
+                "e2949006341692d9",
+                "4243d6d8dd5c6747"
             ]
         ]
     },
     {
-        "id": "af9f19468bdd9008",
+        "id": "e2949006341692d9",
         "type": "debug",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -2974,9 +3024,9 @@
         "wires": []
     },
     {
-        "id": "c8461bbbb2a749c9",
+        "id": "f1140d4671eb769b",
         "type": "change",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "diskspace",
         "rules": [
             {
@@ -3003,17 +3053,17 @@
         "y": 380,
         "wires": [
             [
-                "505f5f7369896f84"
+                "60658b6c2f4a150b"
             ]
         ]
     },
     {
-        "id": "505f5f7369896f84",
+        "id": "60658b6c2f4a150b",
         "type": "link call",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "call sql node",
         "links": [
-            "95da72028cf9cd2f"
+            "53b5921cb08c5e83"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -3021,14 +3071,14 @@
         "y": 380,
         "wires": [
             [
-                "2a57e04f9d3a6292"
+                "a42307737d19bd16"
             ]
         ]
     },
     {
-        "id": "2a57e04f9d3a6292",
+        "id": "a42307737d19bd16",
         "type": "change",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "rules": [
             {
@@ -3038,6 +3088,11 @@
                 "to": "payload",
                 "tot": "msg",
                 "dc": true
+            },
+            {
+                "t": "delete",
+                "p": "topic",
+                "pt": "msg"
             }
         ],
         "action": "",
@@ -3045,19 +3100,19 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 720,
         "y": 380,
         "wires": [
             [
-                "5811735a85d61259",
-                "9f5f6284069a7b3c"
+                "0b1f71fe1c0ec572",
+                "2e163ab404c73f72"
             ]
         ]
     },
     {
-        "id": "5811735a85d61259",
+        "id": "0b1f71fe1c0ec572",
         "type": "debug",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -3070,9 +3125,9 @@
         "wires": []
     },
     {
-        "id": "52c90be2130f98fe",
+        "id": "4243d6d8dd5c6747",
         "type": "change",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "temperature",
         "rules": [
             {
@@ -3099,17 +3154,17 @@
         "y": 500,
         "wires": [
             [
-                "cf132f9d06d19f90"
+                "105cdb84a63aa846"
             ]
         ]
     },
     {
-        "id": "cf132f9d06d19f90",
+        "id": "105cdb84a63aa846",
         "type": "link call",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "call sql node",
         "links": [
-            "95da72028cf9cd2f"
+            "53b5921cb08c5e83"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -3117,14 +3172,14 @@
         "y": 500,
         "wires": [
             [
-                "d35b600623728ed4"
+                "294b02f334ebb62c"
             ]
         ]
     },
     {
-        "id": "d35b600623728ed4",
+        "id": "294b02f334ebb62c",
         "type": "change",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "rules": [
             {
@@ -3134,6 +3189,11 @@
                 "to": "payload",
                 "tot": "msg",
                 "dc": true
+            },
+            {
+                "t": "delete",
+                "p": "topic",
+                "pt": "msg"
             }
         ],
         "action": "",
@@ -3141,19 +3201,19 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
+        "x": 720,
         "y": 500,
         "wires": [
             [
-                "fb06abd1572ccb69",
-                "2491ed42160bb3aa"
+                "a954c53d6a6514e1",
+                "a22ce911db1432ab"
             ]
         ]
     },
     {
-        "id": "fb06abd1572ccb69",
+        "id": "a954c53d6a6514e1",
         "type": "debug",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -3166,10 +3226,10 @@
         "wires": []
     },
     {
-        "id": "a78ce03b397a859d",
+        "id": "2bc160383d88bbdb",
         "type": "change",
-        "z": "53ac84143b97ee93",
-        "name": "piInfo",
+        "z": "c4ddbef3c7b4c989",
+        "name": "build SQL statement",
         "rules": [
             {
                 "t": "set",
@@ -3211,18 +3271,19 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 450,
+        "x": 500,
         "y": 1060,
         "wires": [
             [
-                "9abb2d4a70693f1b"
+                "90d8b9f2d90bf324",
+                "6e10e6aa405dc9ec"
             ]
         ]
     },
     {
-        "id": "cc822db2244cdbba",
+        "id": "4db94395a404a129",
         "type": "debug",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -3237,22 +3298,22 @@
         "wires": []
     },
     {
-        "id": "4d05e533fc214a78",
+        "id": "f203c0a72762d6d2",
         "type": "link out",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "mode": "link",
         "links": [
-            "c7dc9a8193f4d710"
+            "eb2e336937ed624b"
         ],
         "x": 445,
         "y": 900,
         "wires": []
     },
     {
-        "id": "2491ed42160bb3aa",
+        "id": "a22ce911db1432ab",
         "type": "change",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "software",
         "rules": [
             {
@@ -3266,7 +3327,7 @@
                 "t": "set",
                 "p": "limit",
                 "pt": "msg",
-                "to": ";",
+                "to": "",
                 "tot": "str"
             }
         ],
@@ -3279,17 +3340,18 @@
         "y": 560,
         "wires": [
             [
-                "4a4ea9e55263979c"
+                "d3e76bb102a33e94",
+                "d0336464fca0dedb"
             ]
         ]
     },
     {
-        "id": "4a4ea9e55263979c",
+        "id": "d3e76bb102a33e94",
         "type": "link call",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
         "name": "call sql node",
         "links": [
-            "95da72028cf9cd2f"
+            "53b5921cb08c5e83"
         ],
         "linkType": "static",
         "timeout": "30",
@@ -3297,14 +3359,180 @@
         "y": 560,
         "wires": [
             [
-                "4ff03d47d5e30980"
+                "0952dd7321cb7935"
             ]
         ]
     },
     {
-        "id": "4ff03d47d5e30980",
+        "id": "0952dd7321cb7935",
         "type": "change",
-        "z": "53ac84143b97ee93",
+        "z": "c4ddbef3c7b4c989",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "software",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 560,
+        "wires": [
+            [
+                "484c32c11eca7863",
+                "5b8acf9663cdbc60"
+            ]
+        ]
+    },
+    {
+        "id": "484c32c11eca7863",
+        "type": "debug",
+        "z": "c4ddbef3c7b4c989",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 970,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ddf8ae6f12383d94",
+        "type": "comment",
+        "z": "c4ddbef3c7b4c989",
+        "name": "Get data from table",
+        "info": "",
+        "x": 350,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "90d8b9f2d90bf324",
+        "type": "sqlite",
+        "z": "c4ddbef3c7b4c989",
+        "mydb": "d54830887efaf336",
+        "sqlquery": "msg.topic",
+        "sql": "select * from piinfo where hostname = {{msg.payload}};",
+        "name": "Get data from table",
+        "x": 730,
+        "y": 1060,
+        "wires": [
+            [
+                "9f2cb24f15eea024"
+            ]
+        ]
+    },
+    {
+        "id": "eddc8f40003847db",
+        "type": "inject",
+        "z": "c4ddbef3c7b4c989",
+        "name": "Manual trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "9f314facdb870efb"
+            ]
+        ]
+    },
+    {
+        "id": "b31ae47fb9d4a539",
+        "type": "switch",
+        "z": "c4ddbef3c7b4c989",
+        "name": "skip 'connect' and 'change'",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "connect",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "change",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 400,
+        "y": 260,
+        "wires": [
+            [],
+            [],
+            [
+                "9f314facdb870efb"
+            ]
+        ]
+    },
+    {
+        "id": "6e10e6aa405dc9ec",
+        "type": "debug",
+        "z": "c4ddbef3c7b4c989",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "d0336464fca0dedb",
+        "type": "debug",
+        "z": "c4ddbef3c7b4c989",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 610,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "04ea442125d2eb48",
+        "type": "change",
+        "z": "c4ddbef3c7b4c989",
         "name": "",
         "rules": [
             {
@@ -3341,124 +3569,16 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 560,
+        "x": 840,
+        "y": 760,
         "wires": [
-            [
-                "313e8efa354ec021",
-                "f285f29d4076a6fc"
-            ]
+            []
         ]
     },
     {
-        "id": "313e8efa354ec021",
-        "type": "debug",
-        "z": "53ac84143b97ee93",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 970,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "e8ecc6e857d44af0",
+        "id": "a2bea571e56fd323",
         "type": "comment",
-        "z": "53ac84143b97ee93",
-        "name": "Get data from table",
-        "info": "",
-        "x": 350,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "9abb2d4a70693f1b",
-        "type": "sqlite",
-        "z": "53ac84143b97ee93",
-        "mydb": "d54830887efaf336",
-        "sqlquery": "msg.topic",
-        "sql": "select * from piinfo where hostname = {{msg.payload}};",
-        "name": "Get data from table",
-        "x": 650,
-        "y": 1060,
-        "wires": [
-            [
-                "147718afa0135ed8"
-            ]
-        ]
-    },
-    {
-        "id": "4b10277da6b267a7",
-        "type": "inject",
-        "z": "53ac84143b97ee93",
-        "name": "Manual trigger",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 320,
-        "wires": [
-            [
-                "566397c081cdb9de"
-            ]
-        ]
-    },
-    {
-        "id": "9d3944a0ef36308f",
-        "type": "switch",
-        "z": "53ac84143b97ee93",
-        "name": "skip 'connect' and 'change'",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "connect",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "change",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 400,
-        "y": 260,
-        "wires": [
-            [],
-            [],
-            [
-                "566397c081cdb9de"
-            ]
-        ]
-    },
-    {
-        "id": "5ba8e068d5274836",
-        "type": "comment",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "Create the 'piinfo' tables",
         "info": "",
         "x": 350,
@@ -3466,9 +3586,9 @@
         "wires": []
     },
     {
-        "id": "1650944d27ee494d",
+        "id": "e36afa5457ba41e2",
         "type": "inject",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "Drop and create the tables",
         "props": [
             {
@@ -3490,15 +3610,15 @@
         "y": 220,
         "wires": [
             [
-                "e14161e9dd139d52"
+                "d14f0d537ec40f84"
             ]
         ]
     },
     {
-        "id": "fa429b0eabf404fd",
+        "id": "c71506966974742f",
         "type": "comment",
-        "z": "9275e1940cb248fa",
-        "g": "579e908f7463658d",
+        "z": "feb7fb4e1a842f5a",
+        "g": "6d063c17373d5270",
         "name": "This will drop and create the tables. WARNING: running this will wipe out any data already in the tables. ",
         "info": "(Manual) - Run this flow once when installing or if the release notes say \nto upgrade the database.\n\nThe reason this drops and recreates the tables is in the case where new columns\nare being added to one of the tables. \n\n(Yes I know that you could use ALTER but this seems easier to maintain in this case.)",
         "x": 530,
@@ -3506,9 +3626,9 @@
         "wires": []
     },
     {
-        "id": "8c234f3fd52154a7",
+        "id": "8596e274e6814d45",
         "type": "debug",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -3523,9 +3643,9 @@
         "wires": []
     },
     {
-        "id": "126e5c03d4a39db7",
+        "id": "80816f34f9a125cf",
         "type": "catch",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "scope": null,
         "uncaught": false,
@@ -3533,14 +3653,14 @@
         "y": 260,
         "wires": [
             [
-                "6ae4be90998942ec"
+                "7b13611d76fa2153"
             ]
         ]
     },
     {
-        "id": "6ae4be90998942ec",
+        "id": "7b13611d76fa2153",
         "type": "debug",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -3555,9 +3675,9 @@
         "wires": []
     },
     {
-        "id": "a6df976952de8e86",
+        "id": "f7b23055bbd57379",
         "type": "template",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "CREATE TABLE temperature",
         "field": "topic",
         "fieldType": "msg",
@@ -3569,14 +3689,14 @@
         "y": 740,
         "wires": [
             [
-                "95d944e2b25af77c"
+                "40d9bc62e21d7b88"
             ]
         ]
     },
     {
-        "id": "0dbb4c4af0093d24",
+        "id": "8f88b8f82144bd54",
         "type": "template",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "CREATE TABLE diskspace",
         "field": "topic",
         "fieldType": "msg",
@@ -3588,15 +3708,15 @@
         "y": 700,
         "wires": [
             [
-                "95d944e2b25af77c",
-                "a6df976952de8e86"
+                "40d9bc62e21d7b88",
+                "f7b23055bbd57379"
             ]
         ]
     },
     {
-        "id": "5a1c86293c9c2272",
+        "id": "1e514740e3cfa91d",
         "type": "template",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "CREATE TABLE memory",
         "field": "topic",
         "fieldType": "msg",
@@ -3608,15 +3728,15 @@
         "y": 660,
         "wires": [
             [
-                "95d944e2b25af77c",
-                "0dbb4c4af0093d24"
+                "40d9bc62e21d7b88",
+                "8f88b8f82144bd54"
             ]
         ]
     },
     {
-        "id": "683369cf3f24209a",
+        "id": "644c3d7eb9c4bfea",
         "type": "delay",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -3634,14 +3754,14 @@
         "y": 740,
         "wires": [
             [
-                "a6df976952de8e86"
+                "f7b23055bbd57379"
             ]
         ]
     },
     {
-        "id": "a2ba51c972161e22",
+        "id": "08b73a08df688da4",
         "type": "delay",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -3659,14 +3779,14 @@
         "y": 660,
         "wires": [
             [
-                "5a1c86293c9c2272"
+                "1e514740e3cfa91d"
             ]
         ]
     },
     {
-        "id": "865617829006aed8",
+        "id": "62ef72f107b51de8",
         "type": "delay",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -3684,14 +3804,14 @@
         "y": 700,
         "wires": [
             [
-                "0dbb4c4af0093d24"
+                "8f88b8f82144bd54"
             ]
         ]
     },
     {
-        "id": "f41a045363efbf56",
+        "id": "fa230f46649e69b1",
         "type": "template",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "DROP TABLE temperature",
         "field": "topic",
         "fieldType": "msg",
@@ -3703,15 +3823,15 @@
         "y": 440,
         "wires": [
             [
-                "bdf72d90c5079554",
-                "e18d9df98e6728f0"
+                "51e5642629afa8e2",
+                "1df22b317e369507"
             ]
         ]
     },
     {
-        "id": "655bedec0a2f9d44",
+        "id": "2913bbd417f4cf31",
         "type": "template",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "DROP TABLE diskspace",
         "field": "topic",
         "fieldType": "msg",
@@ -3723,15 +3843,15 @@
         "y": 400,
         "wires": [
             [
-                "bdf72d90c5079554",
-                "f41a045363efbf56"
+                "51e5642629afa8e2",
+                "fa230f46649e69b1"
             ]
         ]
     },
     {
-        "id": "8bccfc2a0cc37484",
+        "id": "766d4137cbba6c2e",
         "type": "template",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "DROP TABLE memory",
         "field": "topic",
         "fieldType": "msg",
@@ -3743,15 +3863,15 @@
         "y": 360,
         "wires": [
             [
-                "bdf72d90c5079554",
-                "655bedec0a2f9d44"
+                "51e5642629afa8e2",
+                "2913bbd417f4cf31"
             ]
         ]
     },
     {
-        "id": "e14161e9dd139d52",
+        "id": "d14f0d537ec40f84",
         "type": "template",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "DROP TABLE piInfo",
         "field": "topic",
         "fieldType": "msg",
@@ -3763,15 +3883,15 @@
         "y": 280,
         "wires": [
             [
-                "bdf72d90c5079554",
-                "f504f8a4a34f3999"
+                "51e5642629afa8e2",
+                "133338dfebf44d5e"
             ]
         ]
     },
     {
-        "id": "80b1f30b713a89c6",
+        "id": "a085811d5c1e37f9",
         "type": "delay",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -3789,14 +3909,14 @@
         "y": 440,
         "wires": [
             [
-                "f41a045363efbf56"
+                "fa230f46649e69b1"
             ]
         ]
     },
     {
-        "id": "113475649f901b00",
+        "id": "a90ec931afb89931",
         "type": "delay",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -3814,14 +3934,14 @@
         "y": 360,
         "wires": [
             [
-                "8bccfc2a0cc37484"
+                "766d4137cbba6c2e"
             ]
         ]
     },
     {
-        "id": "d91dd95905271a6b",
+        "id": "b6e703f1dab9bd95",
         "type": "delay",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -3839,58 +3959,58 @@
         "y": 400,
         "wires": [
             [
-                "655bedec0a2f9d44"
+                "2913bbd417f4cf31"
             ]
         ]
     },
     {
-        "id": "95d944e2b25af77c",
+        "id": "40d9bc62e21d7b88",
         "type": "link out",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "to process SQL",
         "mode": "link",
         "links": [
-            "2b66a9c2d07180f5"
+            "867a346715b59eee"
         ],
         "x": 615,
         "y": 660,
         "wires": []
     },
     {
-        "id": "2b66a9c2d07180f5",
+        "id": "867a346715b59eee",
         "type": "link in",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "process SQL",
         "links": [
-            "95d944e2b25af77c",
-            "bdf72d90c5079554",
-            "db39994054603530"
+            "40d9bc62e21d7b88",
+            "51e5642629afa8e2",
+            "fdc18ab65962654d"
         ],
         "x": 735,
         "y": 520,
         "wires": [
             [
-                "d12616ffa78cd528"
+                "d6be067405fe1b60"
             ]
         ]
     },
     {
-        "id": "bdf72d90c5079554",
+        "id": "51e5642629afa8e2",
         "type": "link out",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "to process SQL",
         "mode": "link",
         "links": [
-            "2b66a9c2d07180f5"
+            "867a346715b59eee"
         ],
         "x": 635,
         "y": 340,
         "wires": []
     },
     {
-        "id": "b7f84d38e55bd72b",
+        "id": "a6771d797c5eccaa",
         "type": "inject",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "props": [
             {
@@ -3907,14 +4027,14 @@
         "y": 900,
         "wires": [
             [
-                "db39994054603530"
+                "fdc18ab65962654d"
             ]
         ]
     },
     {
-        "id": "e3a83b1e08766107",
+        "id": "adfe0ba1be216270",
         "type": "inject",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "props": [
             {
@@ -3931,14 +4051,14 @@
         "y": 1000,
         "wires": [
             [
-                "db39994054603530"
+                "fdc18ab65962654d"
             ]
         ]
     },
     {
-        "id": "789f825d6a594460",
+        "id": "7d0397be262a4fdd",
         "type": "inject",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "props": [
             {
@@ -3955,14 +4075,14 @@
         "y": 1060,
         "wires": [
             [
-                "db39994054603530"
+                "fdc18ab65962654d"
             ]
         ]
     },
     {
-        "id": "6210cc55b7e6a568",
+        "id": "86103fac74cac8b7",
         "type": "inject",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "props": [
             {
@@ -3979,18 +4099,18 @@
         "y": 1120,
         "wires": [
             [
-                "db39994054603530"
+                "fdc18ab65962654d"
             ]
         ]
     },
     {
-        "id": "db39994054603530",
+        "id": "fdc18ab65962654d",
         "type": "link out",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "to process SQL",
         "mode": "link",
         "links": [
-            "2b66a9c2d07180f5",
+            "867a346715b59eee",
             "f7f6500f83bb61d8",
             "5a4472ca5f86d301"
         ],
@@ -4000,9 +4120,9 @@
         "l": true
     },
     {
-        "id": "261a15284e48b502",
+        "id": "0729fbf1b5d40550",
         "type": "inject",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "props": [
             {
@@ -4019,14 +4139,14 @@
         "y": 860,
         "wires": [
             [
-                "db39994054603530"
+                "fdc18ab65962654d"
             ]
         ]
     },
     {
-        "id": "74390a6051245019",
+        "id": "173665859fd3d13d",
         "type": "template",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "CREATE TABLE piInfo",
         "field": "topic",
         "fieldType": "msg",
@@ -4038,15 +4158,15 @@
         "y": 580,
         "wires": [
             [
-                "95d944e2b25af77c",
-                "33c4ce35a6bbb5c7"
+                "40d9bc62e21d7b88",
+                "254569396f367643"
             ]
         ]
     },
     {
-        "id": "33c4ce35a6bbb5c7",
+        "id": "254569396f367643",
         "type": "template",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "CREATE TABLE software",
         "field": "topic",
         "fieldType": "msg",
@@ -4058,15 +4178,15 @@
         "y": 620,
         "wires": [
             [
-                "95d944e2b25af77c",
-                "5a1c86293c9c2272"
+                "40d9bc62e21d7b88",
+                "1e514740e3cfa91d"
             ]
         ]
     },
     {
-        "id": "fdd721dd89ee79ec",
+        "id": "57cd2385ccb68882",
         "type": "delay",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -4084,14 +4204,14 @@
         "y": 620,
         "wires": [
             [
-                "33c4ce35a6bbb5c7"
+                "254569396f367643"
             ]
         ]
     },
     {
-        "id": "ac0474432c49ef26",
+        "id": "ac4ef9db835067f5",
         "type": "delay",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -4109,14 +4229,14 @@
         "y": 320,
         "wires": [
             [
-                "f504f8a4a34f3999"
+                "133338dfebf44d5e"
             ]
         ]
     },
     {
-        "id": "f504f8a4a34f3999",
+        "id": "133338dfebf44d5e",
         "type": "template",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "DROP TABLE software",
         "field": "topic",
         "fieldType": "msg",
@@ -4128,15 +4248,15 @@
         "y": 320,
         "wires": [
             [
-                "bdf72d90c5079554",
-                "8bccfc2a0cc37484"
+                "51e5642629afa8e2",
+                "766d4137cbba6c2e"
             ]
         ]
     },
     {
-        "id": "0606e2e8077e6446",
+        "id": "ef6cadcd700ea4c7",
         "type": "inject",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "props": [
             {
@@ -4153,14 +4273,14 @@
         "y": 940,
         "wires": [
             [
-                "db39994054603530"
+                "fdc18ab65962654d"
             ]
         ]
     },
     {
-        "id": "e18d9df98e6728f0",
+        "id": "1df22b317e369507",
         "type": "delay",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "pauseType": "delay",
         "timeout": "1",
@@ -4178,14 +4298,14 @@
         "y": 580,
         "wires": [
             [
-                "74390a6051245019"
+                "173665859fd3d13d"
             ]
         ]
     },
     {
-        "id": "d12616ffa78cd528",
+        "id": "d6be067405fe1b60",
         "type": "sqlite",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "mydb": "d54830887efaf336",
         "sqlquery": "msg.topic",
         "sql": "",
@@ -4194,14 +4314,14 @@
         "y": 520,
         "wires": [
             [
-                "8c234f3fd52154a7"
+                "8596e274e6814d45"
             ]
         ]
     },
     {
-        "id": "a873a0f09f29dbba",
+        "id": "5a70c50c42b40f79",
         "type": "inject",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "",
         "props": [
             {
@@ -4223,14 +4343,14 @@
         "y": 420,
         "wires": [
             [
-                "dadc3f688660a418"
+                "a6ced925e8a4454b"
             ]
         ]
     },
     {
-        "id": "dadc3f688660a418",
+        "id": "a6ced925e8a4454b",
         "type": "template",
-        "z": "9275e1940cb248fa",
+        "z": "feb7fb4e1a842f5a",
         "name": "CREATE DATABASE",
         "field": "topic",
         "fieldType": "msg",
@@ -4242,6 +4362,54 @@
         "y": 420,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "a9417c51fb605055",
+        "type": "inject",
+        "z": "feb7fb4e1a842f5a",
+        "name": "select * from software where hostname = \"yellowpi\" ORDER BY last_seen ASC LIMIT 1 ",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "select * from software where hostname = \"yellowpi\" ORDER BY last_seen ASC",
+        "x": 540,
+        "y": 1240,
+        "wires": [
+            [
+                "fdc18ab65962654d"
+            ]
+        ]
+    },
+    {
+        "id": "80dee4445056c292",
+        "type": "inject",
+        "z": "feb7fb4e1a842f5a",
+        "name": "select * from software where hostname = \"yellowpi\" ",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "select * from software where hostname = \"yellowpi\" ",
+        "x": 370,
+        "y": 1300,
+        "wires": [
+            [
+                "fdc18ab65962654d"
+            ]
         ]
     }
 ]
