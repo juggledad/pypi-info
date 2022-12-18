@@ -14,7 +14,7 @@
  Restart=always
  RuntimeMaxSec=1d
  
- ExecStart=usr/bin/python3 /etc/sctipts/pypi-info.py
+ ExecStart=usr/bin/python3 /etc/scripts/pypi-info.py
  StandardOutput=syslog
  StandardError=syslog
  SyslogIdentifier=pypi-info
