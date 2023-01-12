@@ -2,9 +2,9 @@
     {
         "id": "5f485e062dc78bcc",
         "type": "tab",
-        "label": "Pi-Info gather V0.3.2",
+        "label": "Pi-Info gather V0.3.3",
         "disabled": false,
-        "info": "v0.2.1 - added code to get node.js version number\n       - added right alignment for versions\nv0.3.0 - clean up code\n\nv0.3.1 - fixed issue where only one item of software was being displayed\nv0.3.2 - fixed php version info and added grafana to the software reported",
+        "info": "v0.2.1 - added code to get node.js version number\n       - added right alignment for versions\nv0.3.0 - clean up code\n\nv0.3.1 - fixed issue where only one item of software was being displayed\nv0.3.2 - fixed php version info and added grafana to the software reported\n\nv0.3.3 - added 'git' version info",
         "env": []
     },
     {
@@ -55,11 +55,12 @@
             "50b7f46eb29fae57",
             "b11161c1b0933093",
             "a4bd1a6ad85927ea",
-            "495e5cb28a71bf40"
+            "495e5cb28a71bf40",
+            "17ce3d773f9e5087"
         ],
-        "x": 94,
+        "x": 74,
         "y": -1,
-        "w": 952,
+        "w": 972,
         "h": 382
     },
     {
@@ -1245,7 +1246,7 @@
         "type": "function",
         "z": "5f485e062dc78bcc",
         "name": "Setup data for main dashboard",
-        "func": "let payloads = msg.payload\n\n// get the list of known hosts \nlet hosts = flow.get(\"hostnames\")||[]\n\nlet data = {}\nlet mem = {}\nlet disk = {}\nconst hostArray =[] // this will be sent to the dashboard\n\n// combine all flow.\"hostname\" objects into one\nhosts.forEach(hostname => {\n    var piData = flow.get(hostname)||{}\n    piData.device_status = 1  // set pi status to active\n\n    // convert last_seen to a string and add it to object\n    let d = new Date(piData.last_seen);\n    let last_seen_time = d.getTime();\n    piData.last_seen_text = d.toLocaleString(\"en-US\")\n\n    // get current time - 10 minutes\n    var interval_limit = new Date().getTime() - 600000;\n\n    // if pi hasn't been seen in over an hour set status out of service\n    if (interval_limit > last_seen_time) piData.device_status = 0\n\n    piData.disk_percentused = piData.disk_percentused\n\n    // push the host data into data array tobe sent to the ui-template\n    hostArray.push(piData)\n    });\n\nmsg.payload = hostArray\n\n\nreturn msg;",
+        "func": "let payloads = msg.payload\n\n// get the list of known hosts \nconst hosts = flow.get(\"hostnames\")||[]\n\nlet data = {}\nlet mem = {}\nlet disk = {}\nconst hostArray =[] // this will be sent to the dashboard\n\n// combine all flow.\"hostname\" objects into one\nhosts.forEach(hostname => {\n    var piData = flow.get(hostname)||{}\n    piData.device_status = 1  // set pi status to active\n\n    // convert last_seen to a string and add it to object\n    let d = new Date(piData.last_seen);\n    let last_seen_time = d.getTime();\n    piData.last_seen_text = d.toLocaleString(\"en-US\")\n\n    // get current time - 5 minutes\n    let interval_limit = new Date().getTime() - 300000;\n\n    // if pi hasn't been seen in over an hour set status out of service\n    if (interval_limit > last_seen_time) piData.device_status = 0\n\n    piData.disk_percentused = piData.disk_percentused\n\n    // push the host data into data array tobe sent to the ui-template\n    hostArray.push(piData)\n    });\n\nmsg.payload = hostArray\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1371,7 +1372,6 @@
         "y": 720,
         "wires": [
             [
-                "6ccf2de721f26011",
                 "fdad584e655c508f"
             ]
         ]
@@ -1551,7 +1551,7 @@
         "type": "function",
         "z": "5f485e062dc78bcc",
         "name": "Parse Piinfo",
-        "func": "// This function will build a piinfo table entry once all\n// the required data has has been  received\nlet hostname = msg.hostname\nlet command = msg.command\nlet payload = msg.payload\nlet host = flow.get(hostname)||{}\nlet items = 0\n\nif(host.hasOwnProperty(\"ip\")) items++\nif(host.hasOwnProperty(\"model\")) items++\nif(host.hasOwnProperty(\"disk_percentused\")) items++\nif(host.hasOwnProperty(\"uptime\")) items++\nif(host.hasOwnProperty(\"temperature\")) items++\n\n// format commands that have extra text in their responses\nswitch(command) {\n   case \"hostname\":\n        payload = hostname;\n        items--\n        break;\n\n     case \"ip\":\n        payload = payload.replace(/ \\n/g, '');\n        break;\n\n    case \"last_seen\":\n        payload = Date.parse(payload);\n        break;\n\n    case \"model\":\n        payload = payload.slice(0, -1);\n        payload = payload.toString();\n        payload = payload.replace(\"Raspberry \",\"\");\n        break;\n \n    case \"osrelease\":\n        payload = payload.replace('Codename:', '');\n        payload = payload.trim();\n        break;\n \n    case \"temperature\":\n        payload = payload.split(\"=\")[1];\n        payload = payload.replace(/\\n/g,\"\");\n        payload = payload.replace(\"'C\", \"\");\n        payload = parseFloat(payload)\n        break;\n\n    case \"uptime\":\n        payload = payload.replace(/[\\r\\n]+/gm, \"\");\n        break;\n\n    default:\n        break;\n}\n\nconst d1 = new Date();\nhost['last_seen']   = d1.getTime();\n\nmsg.payload = payload\nhost[command] = payload;\n//node.warn(host)\nflow.set(hostname, host)\nmsg.data = host\n\n//if all items found, write out the piinfo record\nif (items < 5) return\nreturn msg;",
+        "func": "// This function will build a piinfo table entry once all\n// the required data has has been  received\nlet hostname = msg.hostname\nlet command = msg.command\nlet payload = msg.payload\nlet host = flow.get(hostname)||{}\nlet items = 0\n\nif(host.hasOwnProperty(\"ip\")) items++\nif(host.hasOwnProperty(\"model\")) items++\nif(host.hasOwnProperty(\"disk_percentused\")) items++\nif(host.hasOwnProperty(\"uptime\")) items++\nif(host.hasOwnProperty(\"temperature\")) items++\n\n// format commands that have extra text in their responses\nswitch(command) {\n   case \"hostname\":\n        payload = hostname;\n        items--\n        break;\n\n     case \"ip\":\n        payload = payload.replace(/ \\n/g, '');\n        break;\n\n    case \"last_seen\":\n        payload = Date.parse(payload);\n        break;\n\n    case \"model\":\n        payload = payload.slice(0, -1);\n        payload = payload.toString();\n        payload = payload.replace(\"Raspberry \",\"\");\n        break;\n \n    case \"osrelease\":\n        payload = payload.replace('Codename:', '');\n        payload = payload.trim();\n        break;\n \n    case \"temperature\":\n        payload = payload.split(\"=\")[1];\n        payload = payload.replace(/\\n/g,\"\");\n        payload = payload.replace(\"'C\", \"\");\n        payload = parseFloat(payload)\n        break;\n\n    case \"uptime\":\n        payload = payload.replace(/[\\r\\n]+/gm, \"\");\n        break;\n\n    default:\n        break;\n}\n\nconst d1 = new Date();\nhost['last_seen']   = d1.getTime();\nmsg.payload = payload\nhost[command] = payload;\n//node.warn(host)\nflow.set(hostname, host)\nmsg.data = host\n\n//if all items found, write out the piinfo record\nif (items < 5) return\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1593,7 +1593,7 @@
         "wires": [
             [
                 "f134c76855d41ae1",
-                "3c2fa3d6b7682d85"
+                "ec7ab345b1a3fc5d"
             ]
         ]
     },
@@ -1624,7 +1624,8 @@
         "name": "Run Command",
         "links": [
             "d7ba2e7a7fe33a57",
-            "4cdb05881444d3b0"
+            "4cdb05881444d3b0",
+            "ba0b7d70f1c5d115"
         ],
         "x": 320,
         "y": 620,
@@ -1760,7 +1761,7 @@
         "type": "function",
         "z": "5f485e062dc78bcc",
         "name": "",
-        "func": "\n// get the list of known hosts \nlet hosts = flow.get(\"hostnames\")||[]\nnode.warn(hosts)\n//let data = {}\n//let mem = {}\n//let disk = {}\n\n// combine all flow.\"hostname\" objects into one\nhosts.forEach(hostname => {\n    var piData = flow.get(hostname)||{}\n    flow.set(hostname, undefined)    \n    \n});\n\nflow.set(\"hostnames\",undefined)\n\n\nreturn msg;",
+        "func": "\n// get the list of known hosts \nconst hosts = flow.get(\"hostnames\")||[]\nnode.warn(hosts)\n//let data = {}\n//let mem = {}\n//let disk = {}\n\n// combine all flow.\"hostname\" objects into one\nhosts.forEach(hostname => {\n    var piData = flow.get(hostname)||{}\n    flow.set(hostname, undefined)    \n    \n});\n\nflow.set(\"hostnames\",undefined)\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1928,7 +1929,7 @@
         "type": "debug",
         "z": "5f485e062dc78bcc",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2058,7 +2059,7 @@
         "type": "function",
         "z": "5f485e062dc78bcc",
         "name": "Parse Software",
-        "func": "// prep to store in software table\nlet release = msg.payload\n//let topic = msg.topic\nlet product = msg.command\n//let command = topic.split('/')[2]\nlet data = {}\n\n// extract release from results that have extra text in their responses\nswitch(product) {\n   case \"grafana\":\n        release = release.split(\"(\");\n        release = release[0].split(\" \");\n        release = release[1];\n        break;\n\n   case \"influx\":\n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[3];\n        break;\n\n    case \"mosquitto\":\n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[2];\n        break;\n \n    case \"netatalk\": \n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" -\")[0];\n        release = release.replace('netatalk ', '');\n        break;\n\n    case \"nodered\": \n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[1];\n        release = release.replace(\"v\",\"\");\n        break;\n\n    case \"nodejs\": \n        release = release.replace(/\\n/g,\"\");\n//        release = release.split(\" \")[1];\n        release = release.replace(\"v\",\"\");\n        break;\n\n    case \"osrelease\":\n        release = release.replace('Codename:', '');\n        release = release.trim();\n        break;\n \n    case \"php\":\n        release = release.replace(/\\n/g, '');\n        release = release.split(\" \")[1];\n        release = release.split(\"~\")[0];\n        break;\n \n    case \"python3\":\n        release = release.replace(/\\n/g, '');\n        release = release.replace('Python ', '');\n        break;\n \n    case \"sqlite3\":\n        release = release.split(\" \")[0];\n        break;\n\n    default:\n        break;\n}\n\nconst d1 = new Date();\n\nmsg.payload = ''\ndata.hostname = msg.hostname\ndata.last_seen = d1.getTime();\ndata.product  = msg.command\ndata.release  = release\n\nmsg.data = data\nreturn msg;",
+        "func": "// prep to store in software table\nlet release = msg.payload\n//let topic = msg.topic\nlet product = msg.command\n//let command = topic.split('/')[2]\nlet data = {}\n\n// extract release from results that have extra text in their responses\nswitch(product) {\n   case \"git\":\n        release = release.split(\" \");\n        release = release[2].replace('\\n','');\n        break;\n\n   case \"grafana\":\n        release = release.split(\"(\");\n        release = release[0].split(\" \");\n        release = release[1];\n        break;\n\n   case \"influx\":\n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[3];\n        break;\n\n    case \"mosquitto\":\n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[2];\n        break;\n \n    case \"netatalk\": \n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" -\")[0];\n        release = release.replace('netatalk ', '');\n        break;\n\n    case \"nodered\": \n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[1];\n        release = release.replace(\"v\",\"\");\n        break;\n\n    case \"nodejs\": \n        release = release.replace(/\\n/g,\"\");\n//        release = release.split(\" \")[1];\n        release = release.replace(\"v\",\"\");\n        break;\n\n    case \"osrelease\":\n        release = release.replace('Codename:', '');\n        release = release.trim();\n        break;\n \n    case \"php\":\n        release = release.replace(/\\n/g, '');\n        release = release.split(\" \")[1];\n        release = release.split(\"~\")[0];\n        break;\n \n    case \"python3\":\n        release = release.replace(/\\n/g, '');\n        release = release.replace('Python ', '');\n        break;\n \n    case \"sqlite3\":\n        release = release.split(\" \")[0];\n        break;\n\n    default:\n        break;\n}\n\nconst d1 = new Date();\n\nmsg.payload = ''\ndata.hostname = msg.hostname\ndata.last_seen = d1.getTime();\ndata.product  = msg.command\ndata.release  = release\n\nmsg.data = data\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2333,7 +2334,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{\"disk\":\"df /\",\"last_seen\":\"date +\\\"%Y-%m-%d %T\\\"\",\"grafana\":\"grafana-server -v\",\"hostname\":\"hostname\",\"influx\":\"influx -version\",\"ip\":\"hostname -I\",\"memory\":\"free\",\"model\":\"cat /proc/device-tree/model\",\"mosquitto\":\"mosquitto -h\",\"netatalk\":\"netatalk -v\",\"nginx\":\"nginx -v\",\"nodered\":\"node-red -?\",\"nodejs\":\"node -v\",\"osrelease\":\"lsb_release -c\",\"php\":\"php -v\",\"python3\":\"python3 --version\",\"sqlite3\":\"sqlite3 -version\",\"temperature\":\"vcgencmd measure_temp\",\"uptime\":\"uptime -p\"}",
+        "payload": "{\"disk\":\"df /\",\"last_seen\":\"date +\\\"%Y-%m-%d %T\\\"\",\"git\":\"git --version\",\"grafana\":\"grafana-server -v\",\"hostname\":\"hostname\",\"influx\":\"influx -version\",\"ip\":\"hostname -I\",\"memory\":\"free\",\"model\":\"cat /proc/device-tree/model\",\"mosquitto\":\"mosquitto -h\",\"netatalk\":\"netatalk -v\",\"nginx\":\"nginx -v\",\"nodered\":\"node-red -?\",\"nodejs\":\"node -v\",\"osrelease\":\"lsb_release -c\",\"php\":\"php -v\",\"python3\":\"python3 --version\",\"sqlite3\":\"sqlite3 -version\",\"temperature\":\"vcgencmd measure_temp\",\"uptime\":\"uptime -p\"}",
         "payloadType": "json",
         "x": 290,
         "y": 560,
@@ -2342,22 +2343,6 @@
                 "d57160dfbd21a0a2"
             ]
         ]
-    },
-    {
-        "id": "3c2fa3d6b7682d85",
-        "type": "debug",
-        "z": "5f485e062dc78bcc",
-        "name": "debug 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 960,
-        "y": 660,
-        "wires": []
     },
     {
         "id": "6b11751446374579",
@@ -2449,7 +2434,8 @@
         "y": 260,
         "wires": [
             [
-                "d7ba2e7a7fe33a57"
+                "d7ba2e7a7fe33a57",
+                "45b6473129dac7c8"
             ]
         ]
     },
@@ -2582,6 +2568,123 @@
         ]
     },
     {
+        "id": "17ce3d773f9e5087",
+        "type": "inject",
+        "z": "5f485e062dc78bcc",
+        "g": "1f5091586d73cdb7",
+        "name": "git",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"git\": \"git --version\"}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "d7ba2e7a7fe33a57"
+            ]
+        ]
+    },
+    {
+        "id": "ec7ab345b1a3fc5d",
+        "type": "debug",
+        "z": "5f485e062dc78bcc",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "45b6473129dac7c8",
+        "type": "debug",
+        "z": "5f485e062dc78bcc",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a2c0bf4f5a6e400c",
+        "type": "inject",
+        "z": "5f485e062dc78bcc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 740,
+        "y": 400,
+        "wires": [
+            [
+                "45b6473129dac7c8"
+            ]
+        ]
+    },
+    {
+        "id": "2e19962c31ddd1f9",
+        "type": "inject",
+        "z": "5f485e062dc78bcc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"users\": \"cat /etc/passwd\"}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 420,
+        "wires": [
+            [
+                "d57160dfbd21a0a2"
+            ]
+        ]
+    },
+    {
         "id": "0c99b846d819e585",
         "type": "comment",
         "z": "c4ddbef3c7b4c989",
@@ -2655,7 +2758,7 @@
         "type": "function",
         "z": "c4ddbef3c7b4c989",
         "name": "Setup data for Details ",
-        "func": "let piinfo = msg.piinfo[0]\n\n// convert last_seen to a string and add it to object\nlet d = new Date(piinfo.last_seen);\npiinfo.last_seen_text = d.toLocaleString(\"en-US\")\n\n// get current time - 10 minutes\nvar interval_limit = new Date().getTime() - 600000;\n\npiinfo.device_status = 1\n\n// if pi hasn't been seen in more than the interval, set status out of service\nif (interval_limit > piinfo.last_seen) piinfo.device_status = 0\n\n\nmsg.piinfo[0] = piinfo\n\nreturn msg;",
+        "func": "let piinfo = msg.piinfo[0]\n\n// convert last_seen to a string and add it to object\nlet d = new Date(piinfo.last_seen);\npiinfo.last_seen_text = d.toLocaleString(\"en-US\")\n\n// get current time - 10 minutes\n//let interval_limit = new Date().getTime() - 600000;\nlet interval_limit = new Date().getTime() - 350000; //little over 5 minutes\n\npiinfo.device_status = 1\n\n// if pi hasn't been seen in more than the interval, set status out of service\nif (interval_limit > piinfo.last_seen) piinfo.device_status = 0\n\n\nmsg.piinfo[0] = piinfo\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3626,23 +3729,6 @@
         "wires": []
     },
     {
-        "id": "8596e274e6814d45",
-        "type": "debug",
-        "z": "feb7fb4e1a842f5a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 520,
-        "wires": []
-    },
-    {
         "id": "80816f34f9a125cf",
         "type": "catch",
         "z": "feb7fb4e1a842f5a",
@@ -4095,7 +4181,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "select * from temperature",
-        "x": 380,
+        "x": 350,
         "y": 1120,
         "wires": [
             [
@@ -4314,7 +4400,7 @@
         "y": 520,
         "wires": [
             [
-                "8596e274e6814d45"
+                "f9563b2d3cd06350"
             ]
         ]
     },
@@ -4381,7 +4467,7 @@
         "onceDelay": 0.1,
         "topic": "select * from software where hostname = \"yellowpi\" ORDER BY last_seen ASC",
         "x": 540,
-        "y": 1240,
+        "y": 1320,
         "wires": [
             [
                 "fdc18ab65962654d"
@@ -4404,12 +4490,53 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "select * from software where hostname = \"yellowpi\" ",
-        "x": 370,
-        "y": 1300,
+        "x": 430,
+        "y": 1360,
         "wires": [
             [
                 "fdc18ab65962654d"
             ]
         ]
+    },
+    {
+        "id": "3bc7778c7ef4b014",
+        "type": "inject",
+        "z": "feb7fb4e1a842f5a",
+        "name": "delete from piinfo",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "delete from piinfo where hostname = 'superpi'",
+        "x": 320,
+        "y": 1200,
+        "wires": [
+            [
+                "fdc18ab65962654d"
+            ]
+        ]
+    },
+    {
+        "id": "f9563b2d3cd06350",
+        "type": "debug",
+        "z": "feb7fb4e1a842f5a",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 520,
+        "wires": []
     }
 ]
