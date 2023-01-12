@@ -1,6 +1,6 @@
 [Unit]
  Description=pypi-info: NR command proccesser
- After=multi-user.target network.target 
+ After=multi-user.target network.target
  Wants=network.target
 
 [Service]
@@ -9,38 +9,28 @@
  Restart=on-failure
  RestartSec=5s
  StartLimitBurst=5
- StartLimitIntervalSec=10
+ StartLimitIntervalsec=10
  StartLimitAction=reboot
  Restart=always
  RuntimeMaxSec=1d
- 
- ExecStart=usr/bin/python3 /etc/scripts/pypi-info.py
- StandardOutput=syslog
- StandardError=syslog
- SyslogIdentifier=pypi-info
+ ExecStart=/usr/bin/python3 /home/pi/.pypiinfo/pypi-info.py
  
 [Install]
  WantedBy=multi-user.target
 
-## original
 #[Unit]
 # Description=pypi-info: NR command proccesser
 # After=multi-user.target network.target 
 # Wants=network.target
 #
 #[Service]
-# Type=simple
+# Type=idle
 # ExecStart=/usr/bin/python3 /home/pi/.pypiinfo/pypi-info.py
 # User=pi
-# #Use SIGINT to stop
-# KillSignal=SIGINT
 # StandardOutput=syslog
 # StandardError=syslog
 # SyslogIdentifier=pypi-info
-# #Auto restart on crash
-# Restart=on-failure
-## RemainAfterExit=no
-# RestartSec=5s
-# 
+# Restart=always
+#
 #[Install]
 # WantedBy=multi-user.target
