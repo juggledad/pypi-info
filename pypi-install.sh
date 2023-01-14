@@ -25,12 +25,12 @@ cd $HOME
 sudo rm -rf pypiinfo
 sudo rm -rf .pypiinfo
 
-#echo "====> install python3-pip and paho-mqtt"
-#sudo apt update
-#sudo apt upgrade -y
-#sudo apt install python3 -y
-#sudo apt install python3-pip -y
-#sudo pip3 install paho-mqtt
+echo "====> install python3-pip and paho-mqtt"
+sudo apt update
+sudo apt upgrade -y
+sudo apt install python3 -y
+sudo apt install python3-pip -y
+sudo pip3 install paho-mqtt
 
 echo "====> enable the pypi-info.service"
 sudo systemctl stop pypi-info.service
