@@ -31,8 +31,11 @@ sudo rm -rf pypiinfo
 #sudo pip3 install paho-mqtt
 
 echo "====> enable the pypi-info.service"
-sudo systemctl enable pypi-info.service
+sudo systemctl stop pypi-info.service
+sudo systemctl disable pypi-info.service
 sudo systemctl daemon-reload
+sudo systemctl enable pypi-info.service
 sudo systemctl start pypi-info.service
+sudo systemctl daemon-reload
 sudo systemctl status pypi-info.service
 echo "You might want to reboot"
