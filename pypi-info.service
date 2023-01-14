@@ -16,8 +16,8 @@
  User=pi
  #Use SIGINT to stop
  KillSignal=SIGINT
- StandardOutput=syslog
- StandardError=syslog
+ #StandardOutput=syslog
+ #StandardError=syslog
  SyslogIdentifier=pypi-info
  #Auto restart on crash
  Restart=on-failure
