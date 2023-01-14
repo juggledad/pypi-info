@@ -16,8 +16,12 @@ echo "====> remove old pypi_info.service and pypi-info.service file if they exis
 sudo rm /lib/systemd/system/pypi_info.service
 sudo rm /lib/systemd/system/pypi-info.service
 
-#echo "====> move pypi-info.service.temp to /lib/systemd/system/ and rename"
-#sudo mv pypi-info.service /lib/systemd/system/pypi-info.service
+echo "====> move pypi-info.service.temp to /etc/systemd/user"
+echo "====> and pypi-info.py and pypiconfig.py to /usr/local/bin"
+sudo mv pypi-info.service /lib/systemd/system/pypi-info.service
+sudo mv pypi-info.py /usr/local/bin/pypi-info.py
+sudo mv pypiconfig.py /usr/local/bin/pypiconfig.py
+sudo rm -rf pypiinfo
 
 #echo "====> install python3-pip and paho-mqtt"
 #sudo apt update
