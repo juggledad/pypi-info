@@ -3,13 +3,13 @@
 umask 0022      # give 'group' and 'others' write permission 
 
 cd $HOME
-#mkdir .pypiinfo
-#cd .pypiinfo
+mkdir pypiinfo
+cd pypiinfo
 
 echo "====> get service file and pypi-info.py"
-curl -sL -o /etc/systemd/user/pypi-info.service https://raw.githubusercontent.com/juggledad/pypi-info/main/pypi-info.service
-curl -sL -o /usr/local/bin/pypi-info.py https://raw.githubusercontent.com/juggledad/pypi-info/main/pypi-info.py 
-curl -sL -o /usr/local/bin/pypiconfig.py https://raw.githubusercontent.com/juggledad/pypi-info/main/pypiconfig.py 
+curl -sL -o pypi-info.service https://raw.githubusercontent.com/juggledad/pypi-info/main/pypi-info.service
+curl -sL -o pypi-info.py https://raw.githubusercontent.com/juggledad/pypi-info/main/pypi-info.py 
+curl -sL -o pypiconfig.py https://raw.githubusercontent.com/juggledad/pypi-info/main/pypiconfig.py 
 
 
 echo "====> remove old pypi_info.service and pypi-info.service file if they exists"
