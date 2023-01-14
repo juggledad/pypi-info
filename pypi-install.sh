@@ -21,7 +21,9 @@ echo "====> and pypi-info.py and pypiconfig.py to /usr/local/bin"
 sudo mv pypi-info.service /lib/systemd/system/pypi-info.service
 sudo mv pypi-info.py /usr/local/bin/pypi-info.py
 sudo mv pypiconfig.py /usr/local/bin/pypiconfig.py
+cd $HOME
 sudo rm -rf pypiinfo
+sudo rm -rf .pypiinfo
 
 #echo "====> install python3-pip and paho-mqtt"
 #sudo apt update
