@@ -1,36 +1,28 @@
+# Python program that waits for MQTT messages containing system commands
+# ======================================================================
+#
+# PyPi-info processes a received command and returns the results in a MQTT msg.
+# The program (pypi-info.py) and it's configuration file (pypiconfig.py) are 
+# placed in usr/local/bin and this file is placed in /etc/systemd/system
+
 [Unit]
  Description=pypi-info: NR command proccesser
- After=multi-user.target network.target
+ After=multi-user.target network.target 
  Wants=network.target
 
 [Service]
  Type=simple
+ ExecStart=/usr/bin/python3 /usr/local/bin/pypi-info.py
  User=pi
+ #Use SIGINT to stop
+ KillSignal=SIGINT
+ StandardOutput=syslog
+ StandardError=syslog
+ SyslogIdentifier=pypi-info
+ #Auto restart on crash
  Restart=on-failure
+ #RemainAfterExit=no
  RestartSec=5s
- StartLimitBurst=5
- StartLimitIntervalsec=10
- StartLimitAction=reboot
- Restart=always
- RuntimeMaxSec=1d
- ExecStart=/usr/bin/python3 /home/pi/.pypiinfo/pypi-info.py
- 
+
 [Install]
  WantedBy=multi-user.target
-
-#[Unit]
-# Description=pypi-info: NR command proccesser
-# After=multi-user.target network.target 
-# Wants=network.target
-#
-#[Service]
-# Type=idle
-# ExecStart=/usr/bin/python3 /home/pi/.pypiinfo/pypi-info.py
-# User=pi
-# StandardOutput=syslog
-# StandardError=syslog
-# SyslogIdentifier=pypi-info
-# Restart=always
-#
-#[Install]
-# WantedBy=multi-user.target
