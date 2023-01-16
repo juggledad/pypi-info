@@ -27,7 +27,7 @@ sudo rm -rf .pypiinfo
 
 echo "====> install python3-pip and paho-mqtt"
 sudo apt update
-sudo apt upgrade -y
+sudo apt full-upgrade -y
 sudo apt install python3 -y
 sudo apt install python3-pip -y
 sudo pip3 install paho-mqtt
