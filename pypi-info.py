@@ -9,15 +9,17 @@
 #
 # Description: This program processes commands and returns results via MQTT.
 # subscribe topic: "pypi_info/command/#"
-# publish topic  : "pypi_info/result/C/H" where 
-#                   C= the command 
+# publish topic  : "pypi_info/H/result/C" where 
 #                   H= hostname of the PI
+#                   C= the command 
 # the content of the command is in the format: {"command id": "actual command"} 
 # example: {"ip": "hostname -I"}
 #          {"osrelease":"cat /etc/os-release"}
 # the result will be returned in json format with stdout and stderr
 # example: {"stdout": "192.168.48.243 \n", "stderr": ""}
 #
+# 2023-03-09 PMW - Changed the order of the levels in the topic reply
+#                - added a 'lwt' 
 ##############################################################################
 
 import paho.mqtt.client as mqtt
@@ -35,8 +37,8 @@ broker_address = pypiconfig.broker
 hostname = socket.gethostname()
 connection_topic = "pypi_info/connected/connected/hostname"
 subscribe_topic  = "pypi_info/command/#"
-publish_topic    = "pypi_info/results/"  # the rest of the reply topic will be built later
-
+publish_topic    = "pypi_info"  # the rest of the reply topic will be built later
+lwt_msg = hostname + " is OFFLINE"
 result_dict = {}
 
 # ----------------------------------------
@@ -68,9 +70,10 @@ def on_message(client, userdata, message):
         
     # grab command from incoming topic to put in reply topic
     topic = message.topic
+    print ("topic received=",topic)
     topic = topic.split("/")
     command = topic[2]
-    topic = publish_topic+command+"/"+hostname
+    topic = publish_topic+"/"+hostname+"/"+"results"+"/"+command
 
     cmd_with_options = y[command]
 
@@ -99,7 +102,7 @@ def on_message(client, userdata, message):
 # ----------------------------------------
 th_abort = False
 client   = mqtt.Client() #create new instance
-
+client.will_set("pypi_info/lwt/"+hostname, lwt_msg, qos=0, retain=False)
 client.on_connect   = on_connect
 client.on_subscribe = on_subscribe
 client.on_message   = on_message
@@ -111,7 +114,7 @@ client.subscribe(subscribe_topic)
 # client.loop_start
 # ----------------------------------------
 client.loop_start()
-result, mid = client.publish("result/data", "Just testing MQTT", 0)
+#result, mid = client.publish("pypi_info/result/test", "Just testing MQTT", 0)
 
 t = 5
 while t == 5 and not th_abort:
