@@ -2,9 +2,9 @@
     {
         "id": "5f485e062dc78bcc",
         "type": "tab",
-        "label": "Pi-Info gather V0.3.5",
+        "label": "Pi-Info gather V0.3.3",
         "disabled": false,
-        "info": "v0.2.1 - added code to get node.js version number\n       - added right alignment for versions\nv0.3.0 - clean up code\n\nv0.3.1 - fixed issue where only one item of software was being displayed\nv0.3.2 - fixed php version info and added grafana to the software reported\n\nv0.3.3 - added 'git' version info\n\nv0.3.4 - added auto refresh of PyPI Display Home tab\n\nv0.3.5 - changed format of mqtt topic replys to:\n         pypi_info/H/C/results\n         where H= hostname of the PI\n         and   C= the command",
+        "info": "v0.2.1 - added code to get node.js version number\n       - added right alignment for versions\nv0.3.0 - clean up code\n\nv0.3.1 - fixed issue where only one item of software was being displayed\nv0.3.2 - fixed php version info and added grafana to the software reported\n\nv0.3.3 - added 'git' version info",
         "env": []
     },
     {
@@ -56,8 +56,7 @@
             "b11161c1b0933093",
             "a4bd1a6ad85927ea",
             "495e5cb28a71bf40",
-            "17ce3d773f9e5087",
-            "4782905a8c65a930"
+            "17ce3d773f9e5087"
         ],
         "x": 74,
         "y": -1,
@@ -104,11 +103,10 @@
             "4510f6bac14d16a7",
             "17871c018f22da1b",
             "f533176ac7842ee6",
-            "cb30d895e50ba973",
-            "1723e2031e29dfe7"
+            "cb30d895e50ba973"
         ],
-        "x": 134,
-        "y": 1199,
+        "x": 94,
+        "y": 1179,
         "w": 892,
         "h": 282
     },
@@ -125,7 +123,9 @@
             "c71506966974742f"
         ],
         "x": 154,
-        "y": 59
+        "y": 59,
+        "w": 752,
+        "h": 82
     },
     {
         "id": "ce8d0c70b33c0823",
@@ -154,8 +154,8 @@
     {
         "id": "fc280b0a645350ec",
         "type": "mqtt-broker",
-        "name": "mqttpizw",
-        "broker": "192.168.48.70",
+        "name": "",
+        "broker": "mqttpizw.local",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -188,7 +188,7 @@
         "tab": "4743286be1803569",
         "order": 2,
         "disp": false,
-        "width": "13",
+        "width": "12",
         "collapse": false,
         "className": ""
     },
@@ -861,8 +861,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 240,
-        "y": 1400,
+        "x": 200,
+        "y": 1380,
         "wires": [
             [
                 "658b15755779cf25"
@@ -911,8 +911,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
-        "y": 1360,
+        "x": 240,
+        "y": 1340,
         "wires": [
             [
                 "8e2cab98cbb3416f",
@@ -933,8 +933,8 @@
         "links": [
             "eb2e336937ed624b"
         ],
-        "x": 900,
-        "y": 1380,
+        "x": 860,
+        "y": 1400,
         "wires": [],
         "l": true
     },
@@ -948,10 +948,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "REPLACE INTO piInfo (\n    hostname, \n    last_seen,\n    ip,\n    model,\n    osrelease,\n    temperature,\n    uptime,\n    disk_percentused\n    )\nVALUES (\n    \"{{hostname}}\",\n     {{data.last_seen}},\n    \"{{data.ip}}\",\n    \"{{data.model}}\",\n    \"{{data.osrelease}}\",\n     {{data.temperature}},\n    \"{{data.uptime}}\",\n    \"{{data.disk.percentused}}\"\n) \nWHERE hostname = \"{{hostname}}\";",
+        "template": "REPLACE INTO piInfo (\n    hostname, \n    last_seen,\n    ip,\n    model,\n    osrelease,\n    temperature,\n    uptime,\n    disk_percentused\n    )\nVALUES (\n    \"{{data.hostname}}\",\n     {{data.last_seen}},\n    \"{{data.ip}}\",\n    \"{{data.model}}\",\n    \"{{data.osrelease}}\",\n     {{data.temperature}},\n    \"{{data.uptime}}\",\n    \"{{data.disk.percentused}}\"\n);",
         "output": "str",
-        "x": 560,
-        "y": 1280,
+        "x": 520,
+        "y": 1260,
         "wires": [
             [
                 "6b11751446374579",
@@ -973,8 +973,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
-        "y": 1260,
+        "x": 850,
+        "y": 1280,
         "wires": []
     },
     {
@@ -989,8 +989,7 @@
         "y": 520,
         "wires": [
             [
-                "5915b5c8498b6650",
-                "b45708f8eec1dbcc"
+                "5915b5c8498b6650"
             ]
         ]
     },
@@ -1000,7 +999,7 @@
         "z": "5f485e062dc78bcc",
         "g": "67ac0672a9e813bd",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1021,8 +1020,8 @@
         "links": [
             "fb1d5bb61132322f"
         ],
-        "x": 260,
-        "y": 1320,
+        "x": 220,
+        "y": 1300,
         "wires": [
             [
                 "658b15755779cf25"
@@ -1035,15 +1034,15 @@
         "type": "template",
         "z": "5f485e062dc78bcc",
         "g": "a45c305e31a9c284",
-        "name": "REPLACE INTO memory",
+        "name": "INSERT INTO memory",
         "field": "topic",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "REPLACE INTO memory (\n    hostname, \n    last_seen,\n    available_mem,\n    buff_cache,\n    free_mem,\n    shared_mem,\n    totalmem,\n    used_mem,\n    free_swap,\n    total_swap,\n    used_swap\n    )\nVALUES (\n    \"{{data.hostname}}\",\n     {{data.last_seen}},\n     {{data.mem_available}},\n     {{data.mem_buff_cache}},\n     {{data.mem_free}},\n     {{data.mem_shared}},\n     {{data.mem_total}},\n     {{data.mem_used}},\n     {{data.used_total}},\n     {{data.used_free}},\n     {{data.used_swap}}\n)\nWHERE hostname = \"{{data.hostname}}\";",
+        "template": "INSERT INTO memory (\n    hostname, \n    last_seen,\n    available_mem,\n    buff_cache,\n    free_mem,\n    shared_mem,\n    totalmem,\n    used_mem,\n    free_swap,\n    total_swap,\n    used_swap\n    )\nVALUES (\n    \"{{data.hostname}}\",\n     {{data.last_seen}},\n     {{data.mem_available}},\n     {{data.mem_buff_cache}},\n     {{data.mem_free}},\n     {{data.mem_shared}},\n     {{data.mem_total}},\n     {{data.mem_used}},\n     {{data.used_total}},\n     {{data.used_free}},\n     {{data.used_swap}}\n);",
         "output": "str",
-        "x": 570,
-        "y": 1360,
+        "x": 520,
+        "y": 1340,
         "wires": [
             [
                 "6b11751446374579"
@@ -1055,15 +1054,15 @@
         "type": "template",
         "z": "5f485e062dc78bcc",
         "g": "a45c305e31a9c284",
-        "name": "REPLACE INTO diskspace",
+        "name": "INSERT INTO diskspace",
         "field": "topic",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "REPLACE INTO diskspace (\n    hostname, \n    last_seen,\n    disk_size,\n    disk_used,\n    disk_avaliable,\n    disk_percentused\n    )\nVALUES (\n    \"{{data.hostname}}\",\n     {{data.last_seen}},\n     {{data.disk_size}},\n     {{data.disk_used}},\n     {{data.disk_avaliable}},\n    \"{{data.disk_percentused}}\"\n)\nWHERE hostname = \"{{data.hostname}}\";",
+        "template": "INSERT INTO diskspace (\n    hostname, \n    last_seen,\n    disk_size,\n    disk_used,\n    disk_avaliable,\n    disk_percentused\n    )\nVALUES (\n    \"{{data.hostname}}\",\n     {{data.last_seen}},\n     {{data.disk_size}},\n     {{data.disk_used}},\n     {{data.disk_avaliable}},\n    \"{{data.disk_percentused}}\"\n);",
         "output": "str",
-        "x": 580,
-        "y": 1320,
+        "x": 530,
+        "y": 1300,
         "wires": [
             [
                 "6b11751446374579"
@@ -1075,15 +1074,15 @@
         "type": "template",
         "z": "5f485e062dc78bcc",
         "g": "a45c305e31a9c284",
-        "name": "REPLACE INTO temperature",
+        "name": "INSERT INTO temperature",
         "field": "topic",
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "REPLACE INTO temperature (\n    hostname, \n    last_seen,\n    temperature\n    )\nVALUES (\n    \"{{data.hostname}}\",\n     {{data.last_seen}},\n     {{data.temperature}}\n)\nWHERE hostname = \"{{data.hostname}}\";",
+        "template": "INSERT INTO temperature (\n    hostname, \n    last_seen,\n    temperature\n    )\nVALUES (\n    \"{{data.hostname}}\",\n     {{data.last_seen}},\n     {{data.temperature}}\n)",
         "output": "str",
-        "x": 580,
-        "y": 1400,
+        "x": 540,
+        "y": 1380,
         "wires": [
             [
                 "6b11751446374579"
@@ -1130,8 +1129,8 @@
         "g": "a45c305e31a9c284",
         "name": "Get the flow items and create the database inserts and store in tables",
         "info": "",
-        "x": 430,
-        "y": 1240,
+        "x": 390,
+        "y": 1220,
         "wires": []
     },
     {
@@ -1144,8 +1143,7 @@
         "y": 1720,
         "wires": [
             [
-                "03733be6f8d03811",
-                "f2b1995e7ef49f63"
+                "03733be6f8d03811"
             ]
         ]
     },
@@ -1189,8 +1187,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 750,
-        "y": 1760,
+        "x": 850,
+        "y": 1720,
         "wires": [
             [
                 "ea12c3583f378021"
@@ -1204,16 +1202,16 @@
         "group": "9113425422938f2e",
         "name": "Raspberry Pi devices2",
         "order": 1,
-        "width": "13",
-        "height": "14",
-        "format": "<div id=\"et_home\">\n<h2 style=\"text-align: center;\">PyPI Display Home </h2>\n<p style=\"text-align: center;\">List of Raspberry Pi's found on your LAN<p>\n<p style=\"text-align: center;\">Click on a 'Hostname' will get you details of that device<p>\n<p style=\"text-align: center;\">Click on a 'IP' will attempt to open Node-RED on that Pi<p>\n\n<br/>\n<table id=\"table\" border=\"1\">\n    <tr>\n        <th>Hostname</th> \n        <th>User</th> \n        <th>IP</th> \n        <th>Last Seen</th> \n        <th>Model</th>\n        <th>OS</th>\n        <th>Disk Used</th>\n        <th>Temperature</th>\n    </tr>\n    <tbody style=\"text-align: center\">\n        <tr ng-repeat=\"x in msg.payload\">\n            <td ng-if=\"x.device_status ==  'database is empty'\" class=\"warning_red\" >DATABASE IS EMPTY</td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\" style=\"text-align: left\"> \n                <md-button ng-click=\"send({host: x.hostname})\">{{x.hostname}}</md-button>\n            </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" style=\"text-align: left\"> \n                <md-button ng-click=\"send({host: x.hostname})\">{{x.hostname}}</md-button>\n            </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.user}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.user}} </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\" ><a href=\"http://{{x.ip}}:1880\" target=\"_blank\"> {{x.ip}} </a></td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >        {{x.ip}}</td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.last_seen_text}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.last_seen_text}} </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.model}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.model}} </td>\n\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.osrelease}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.osrelease}} </td>\n\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.disk_percentused}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.disk_percentused}} </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.temperature}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.temperature}} </td>\n\n         </tr>\n    </tbody>\n</table>\n\n</div>",
+        "width": "12",
+        "height": "10",
+        "format": "<div id=\"et_home\">\n<h2 style=\"text-align: center;\">PyPI Display Home </h2>\n<p style=\"text-align: center;\">List of Raspberry Pi's found on your LAN<p>\n<p style=\"text-align: center;\">Click on a 'Hostname' will get you details of that device<p>\n<p style=\"text-align: center;\">Click on a 'IP' will attempt to open Node-RED on that Pi<p>\n\n<br/>\n<table id=\"table\" border=\"1\">\n    <tr>\n        <th>Hostname</th> \n        <th>IP</th> \n        <th>Last Seen</th> \n        <th>Model</th>\n        <th>OS</th>\n        <th>Disk Used</th>\n        <th>Temperature</th>\n    </tr>\n    <tbody style=\"text-align: center\">\n        <tr ng-repeat=\"x in msg.payload\">\n            <td ng-if=\"x.device_status ==  'database is empty'\" class=\"warning_red\" >DATABASE IS EMPTY</td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\" style=\"text-align: left\"> \n                <md-button ng-click=\"send({host: x.hostname})\">{{x.hostname}}</md-button>\n            </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" style=\"text-align: left\"> \n                <md-button ng-click=\"send({host: x.hostname})\">{{x.hostname}}</md-button>\n            </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\" ><a href=\"http://{{x.ip}}:1880\" target=\"_blank\"> {{x.ip}} </a></td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >        {{x.ip}}</td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.last_seen_text}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.last_seen_text}} </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.model}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.model}} </td>\n\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.osrelease}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.osrelease}} </td>\n\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.disk_percentused}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.disk_percentused}} </td>\n\n            <td ng-if='x.device_status ==  1' class=\"device_online\"  >{{x.temperature}} </td>\n            <td ng-if='x.device_status ==  0' class=\"device_offline\" >{{x.temperature}} </td>\n\n         </tr>\n    </tbody>\n</table>\n\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
         "x": 440,
-        "y": 1880,
+        "y": 1800,
         "wires": [
             [
                 "cb401f40730115bb",
@@ -1235,14 +1233,12 @@
         "cancel": "",
         "raw": false,
         "className": "",
-        "topic": "This Pi not responding",
+        "topic": "",
         "name": "",
-        "x": 950,
+        "x": 830,
         "y": 1760,
         "wires": [
-            [
-                "514ee221c7d2776e"
-            ]
+            []
         ]
     },
     {
@@ -1250,7 +1246,7 @@
         "type": "function",
         "z": "5f485e062dc78bcc",
         "name": "Setup data for main dashboard",
-        "func": "let payloads = msg.payload\n\n// get the list of known hosts \nconst hosts = flow.get(\"hostnames\")||[]\n//node.warn(hosts)\nlet data = {}\nlet mem = {}\nlet disk = {}\nconst hostArray =[] // this will be sent to the dashboard\n\n// combine all flow.\"hostname\" objects into one\nhosts.forEach(hostname => {\n    var piData = flow.get(hostname)||{}\n    piData.hostname = hostname\n    piData.device_status = 1  // set pi status to active\n\n    // convert last_seen to a string and add it to object\n    let d = new Date(piData.last_seen);\n    let last_seen_time = d.getTime();\n    piData.last_seen_text = d.toLocaleString(\"en-US\")\n\n    // get current time - 5 minutes\n    let interval_limit = new Date().getTime() - 300000;\n\n    // if pi hasn't been seen in over an hour set status out of service\n    if (interval_limit > last_seen_time) piData.device_status = 0\n\n    piData.disk_percentused = piData.disk_percentused\n\n    // push the host data into data array tobe sent to the ui-template\n    hostArray.push(piData)\n    });\n\nmsg.payload = hostArray\n\nreturn msg;",
+        "func": "let payloads = msg.payload\n\n// get the list of known hosts \nconst hosts = flow.get(\"hostnames\")||[]\n\nlet data = {}\nlet mem = {}\nlet disk = {}\nconst hostArray =[] // this will be sent to the dashboard\n\n// combine all flow.\"hostname\" objects into one\nhosts.forEach(hostname => {\n    var piData = flow.get(hostname)||{}\n    piData.device_status = 1  // set pi status to active\n\n    // convert last_seen to a string and add it to object\n    let d = new Date(piData.last_seen);\n    let last_seen_time = d.getTime();\n    piData.last_seen_text = d.toLocaleString(\"en-US\")\n\n    // get current time - 5 minutes\n    let interval_limit = new Date().getTime() - 300000;\n\n    // if pi hasn't been seen in over an hour set status out of service\n    if (interval_limit > last_seen_time) piData.device_status = 0\n\n    piData.disk_percentused = piData.disk_percentused\n\n    // push the host data into data array tobe sent to the ui-template\n    hostArray.push(piData)\n    });\n\nmsg.payload = hostArray\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1260,7 +1256,7 @@
         "y": 1700,
         "wires": [
             [
-                "049add616b3a47c5"
+                "30dc076e6da6a658"
             ]
         ]
     },
@@ -1308,7 +1304,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 690,
-        "y": 1880,
+        "y": 1800,
         "wires": []
     },
     {
@@ -1326,8 +1322,7 @@
         "y": 1680,
         "wires": [
             [
-                "0570b02e3a805150",
-                "433bed84a6533cd6"
+                "0570b02e3a805150"
             ]
         ],
         "l": true
@@ -1356,8 +1351,7 @@
         "y": 1760,
         "wires": [
             [
-                "03733be6f8d03811",
-                "069e67fa61f24552"
+                "03733be6f8d03811"
             ]
         ]
     },
@@ -1366,7 +1360,7 @@
         "type": "mqtt in",
         "z": "5f485e062dc78bcc",
         "name": "",
-        "topic": "pypi_info/+/results/#",
+        "topic": "pypi_info/results/#",
         "qos": "2",
         "datatype": "json",
         "broker": "fc280b0a645350ec",
@@ -1374,13 +1368,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 110,
+        "x": 210,
         "y": 720,
         "wires": [
             [
                 "fdad584e655c508f",
-                "c46133d8e5fec274",
-                "b0ccea53ef5e88af"
+                "eca0f7655fc22ac8"
             ]
         ]
     },
@@ -1404,8 +1397,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 410,
-        "y": 960,
+        "x": 430,
+        "y": 860,
         "wires": [
             [
                 "62535e6d8781179e",
@@ -1426,8 +1419,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 430,
-        "y": 1040,
+        "x": 450,
+        "y": 940,
         "wires": []
     },
     {
@@ -1449,8 +1442,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 420,
-        "y": 920,
+        "x": 440,
+        "y": 820,
         "wires": [
             [
                 "1193370557e21007"
@@ -1475,8 +1468,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 200,
-        "y": 940,
+        "x": 220,
+        "y": 840,
         "wires": [
             [
                 "a44a9853afac48db"
@@ -1491,7 +1484,7 @@
         "type": "debug",
         "z": "5f485e062dc78bcc",
         "name": "NOT FOUND",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1499,8 +1492,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
-        "y": 820,
+        "x": 630,
+        "y": 760,
         "wires": []
     },
     {
@@ -1529,8 +1522,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 270,
-        "y": 880,
+        "x": 290,
+        "y": 780,
         "wires": [
             [
                 "43a4f53c2735ffdb"
@@ -1559,7 +1552,7 @@
         "type": "function",
         "z": "5f485e062dc78bcc",
         "name": "Parse Piinfo",
-        "func": "// This function will build a piinfo table entry once all\n// the required data has has been  received\nlet hostname = msg.hostname\nlet command = msg.command\nlet payload = msg.payload\nlet host = flow.get(hostname)||{}\nlet items = 0\n\nif(host.hasOwnProperty(\"ip\")) items++\nif(host.hasOwnProperty(\"model\")) items++\nif(host.hasOwnProperty(\"disk_percentused\")) items++\nif(host.hasOwnProperty(\"uptime\")) items++\nif(host.hasOwnProperty(\"temperature\")) items++\nif(host.hasOwnProperty(\"user\")) items++\n\n// format commands that have extra text in their responses\nswitch(command) {\n   case \"hostname\":\n        payload = hostname;\n        items--\n        break;\n\n     case \"ip\":\n        payload = payload.replace(/ \\n/g, '');\n        break;\n\n    case \"last_seen\":\n        payload = Date.parse(payload);\n        break;\n\n    case \"model\":\n        payload = payload.slice(0, -1);\n        payload = payload.toString();\n        payload = payload.replace(\"Raspberry \",\"\");\n        break;\n \n    case \"osrelease\":\n        payload = payload.replace('Codename:', '');\n        payload = payload.trim();\n        break;\n \n    case \"temperature\":\n        payload = payload.split(\"=\")[1];\n        payload = payload.replace(/\\n/g,\"\");\n        payload = payload.replace(\"'C\", \"\");\n        payload = parseFloat(payload)\n        break;\n\n    case \"uptime\":\n        payload = payload.replace(/[\\r\\n]+/gm, \"\");\n        break;\n\n    case \"user\":\n        payload = payload.split(\") \")[0];\n        payload = payload.split(\"(\")[1];\n        break;\n        \n    default:\n        break;\n}\n\nconst d1 = new Date();\nhost['last_seen']   = d1.getTime();\nmsg.payload = payload\nhost[command] = payload;\n//node.warn(host)\nflow.set(hostname, host)\nmsg.data = host\n\n//if all items found, write out the piinfo record\nif (items < 6) return\nreturn msg;",
+        "func": "// This function will build a piinfo table entry once all\n// the required data has has been  received\nlet hostname = msg.hostname\nlet command = msg.command\nlet payload = msg.payload\nlet host = flow.get(hostname)||{}\nlet items = 0\n\nif(host.hasOwnProperty(\"ip\")) items++\nif(host.hasOwnProperty(\"model\")) items++\nif(host.hasOwnProperty(\"disk_percentused\")) items++\nif(host.hasOwnProperty(\"uptime\")) items++\nif(host.hasOwnProperty(\"temperature\")) items++\n\n// format commands that have extra text in their responses\nswitch(command) {\n   case \"hostname\":\n        payload = hostname;\n        items--\n        break;\n\n     case \"ip\":\n        payload = payload.replace(/ \\n/g, '');\n        break;\n\n    case \"last_seen\":\n        payload = Date.parse(payload);\n        break;\n\n    case \"model\":\n        payload = payload.slice(0, -1);\n        payload = payload.toString();\n        payload = payload.replace(\"Raspberry \",\"\");\n        break;\n \n    case \"osrelease\":\n        payload = payload.replace('Codename:', '');\n        payload = payload.trim();\n        break;\n \n    case \"temperature\":\n        payload = payload.split(\"=\")[1];\n        payload = payload.replace(/\\n/g,\"\");\n        payload = payload.replace(\"'C\", \"\");\n        payload = parseFloat(payload)\n        break;\n\n    case \"uptime\":\n        payload = payload.replace(/[\\r\\n]+/gm, \"\");\n        break;\n\n    default:\n        break;\n}\n\nconst d1 = new Date();\nhost['last_seen']   = d1.getTime();\nmsg.payload = payload\nhost[command] = payload;\n//node.warn(host)\nflow.set(hostname, host)\nmsg.data = host\n\n//if all items found, write out the piinfo record\nif (items < 5) return\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1612,8 +1605,8 @@
         "g": "ce8d0c70b33c0823",
         "name": "",
         "topic": "",
-        "qos": "0",
-        "retain": "false",
+        "qos": "",
+        "retain": "",
         "respTopic": "",
         "contentType": "",
         "userProps": "",
@@ -1633,8 +1626,7 @@
         "links": [
             "d7ba2e7a7fe33a57",
             "4cdb05881444d3b0",
-            "ba0b7d70f1c5d115",
-            "771cd328403c5bcc"
+            "ba0b7d70f1c5d115"
         ],
         "x": 320,
         "y": 620,
@@ -1712,18 +1704,17 @@
                 "t": "else"
             }
         ],
-        "checkall": "false",
+        "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 460,
-        "y": 1760,
+        "x": 440,
+        "y": 1740,
         "wires": [
             [
                 "0dddf9926dd8da14"
             ],
             [
-                "30dc076e6da6a658",
-                "d76190b30ce7791b"
+                "30dc076e6da6a658"
             ]
         ]
     },
@@ -1759,7 +1750,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 200,
-        "y": 2120,
+        "y": 2020,
         "wires": [
             [
                 "512e118a554aab1e"
@@ -1778,7 +1769,7 @@
         "finalize": "",
         "libs": [],
         "x": 430,
-        "y": 2120,
+        "y": 2020,
         "wires": [
             [
                 "ea23b7b72a9aa748",
@@ -1799,7 +1790,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 820,
-        "y": 2120,
+        "y": 2020,
         "wires": []
     },
     {
@@ -1820,7 +1811,7 @@
         "to": "",
         "reg": false,
         "x": 610,
-        "y": 2120,
+        "y": 2020,
         "wires": [
             [
                 "7b2b2c67346e6140"
@@ -1837,7 +1828,7 @@
             "903fdb51603f6e96"
         ],
         "x": 830,
-        "y": 1920,
+        "y": 1840,
         "wires": [],
         "l": true
     },
@@ -1861,7 +1852,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 1920,
+        "y": 1840,
         "wires": [
             [
                 "a7317be7ca7a48e3"
@@ -1889,7 +1880,7 @@
         "repair": false,
         "outputs": 2,
         "x": 450,
-        "y": 1920,
+        "y": 1840,
         "wires": [
             [],
             [
@@ -1907,10 +1898,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "REPLACE INTO software (\n    hostname, \n    last_seen,\n    product,\n    release              \n    )\nVALUES (\n    \"{{data.hostname}}\",\n     {{data.last_seen}},\n    \"{{data.product}}\",\n    \"{{data.release}}\"\n)\nWHERE hostname = \"{{data.hostname}}\";",
+        "template": "REPLACE INTO software (\n    hostname, \n    last_seen,\n    product,\n    release              \n    )\nVALUES (\n    \"{{data.hostname}}\",\n     {{data.last_seen}},\n    \"{{data.product}}\",\n    \"{{data.release}}\"\n);",
         "output": "str",
-        "x": 570,
-        "y": 1440,
+        "x": 530,
+        "y": 1420,
         "wires": [
             [
                 "6b11751446374579"
@@ -1988,17 +1979,12 @@
                 "vt": "str"
             },
             {
-                "t": "cont",
-                "v": "results/user",
-                "vt": "str"
-            },
-            {
                 "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 11,
+        "outputs": 10,
         "x": 670,
         "y": 860,
         "wires": [
@@ -2012,7 +1998,8 @@
                 "74c16f398d13db2e"
             ],
             [
-                "74c16f398d13db2e"
+                "74c16f398d13db2e",
+                "dee84253b03a8b3d"
             ],
             [
                 "74c16f398d13db2e"
@@ -2028,10 +2015,6 @@
             ],
             [
                 "95e4fcf9154e98c0"
-            ],
-            [
-                "f4a9fd0bfe2bfd65",
-                "74c16f398d13db2e"
             ],
             [
                 "133310cc414df644"
@@ -2052,7 +2035,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1130,
-        "y": 980,
+        "y": 940,
         "wires": []
     },
     {
@@ -2060,14 +2043,14 @@
         "type": "function",
         "z": "5f485e062dc78bcc",
         "name": "Parse Software",
-        "func": "// prep to store in software table\nlet release = msg.payload\n//let topic = msg.topic\nlet product = msg.command\n//let command = topic.split('/')[2]\nlet data = {}\n\n// extract release from results that have extra text in their responses\nswitch(product) {\n   case \"git\":\n        release = release.split(\" \");\n        release = release[2].replace('\\n','');\n        break;\n\n   case \"grafana\":\n        release = release.split(\"(\");\n        release = release[0].split(\" \");\n        release = release[1];\n        break;\n\n   case \"influx\":\n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[3];\n        break;\n\n    case \"mosquitto\":\n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[2];\n        break;\n \n    case \"netatalk\": \n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" -\")[0];\n        release = release.replace('netatalk ', '');\n        break;\n\n    case \"nodered\": \n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[1];\n        release = release.replace(\"v\",\"\");\n        break;\n\n    case \"nodejs\": \n        release = release.replace(/\\n/g,\"\");\n//        release = release.split(\" \")[1];\n        release = release.replace(\"v\",\"\");\n        break;\n\n    case \"osrelease\":\n        release = release.replace('Codename:', '');\n        release = release.trim();\n        break;\n \n    case \"php\":\n        release = release.replace(/\\n/g, '');\n        release = release.split(\" \")[1];\n        release = release.split(\"~\")[0];\n        break;\n \n    case \"python3\":\n        release = release.replace(/\\n/g, '');\n        release = release.replace('Python ', '');\n        break;\n \n    case \"sqlite3\":\n        release = release.split(\" \")[0];\n        break;\n\n    case \"reset\":\n        return;\n//        break;\n\n    default:\n        break;\n}\n\nconst d1 = new Date();\n\nmsg.payload = ''\ndata.hostname = msg.hostname\ndata.last_seen = d1.getTime();\ndata.product  = msg.command\ndata.release  = release\n\nmsg.data = data\nreturn msg;",
+        "func": "// prep to store in software table\nlet release = msg.payload\n//let topic = msg.topic\nlet product = msg.command\n//let command = topic.split('/')[2]\nlet data = {}\n\n// extract release from results that have extra text in their responses\nswitch(product) {\n   case \"git\":\n        release = release.split(\" \");\n        release = release[2].replace('\\n','');\n        break;\n\n   case \"grafana\":\n        release = release.split(\"(\");\n        release = release[0].split(\" \");\n        release = release[1];\n        break;\n\n   case \"influx\":\n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[3];\n        break;\n\n    case \"mosquitto\":\n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[2];\n        break;\n \n    case \"netatalk\": \n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" -\")[0];\n        release = release.replace('netatalk ', '');\n        break;\n\n    case \"nodered\": \n        release = release.replace(/\\n/g,\" \");\n        release = release.split(\" \")[1];\n        release = release.replace(\"v\",\"\");\n        break;\n\n    case \"nodejs\": \n        release = release.replace(/\\n/g,\"\");\n//        release = release.split(\" \")[1];\n        release = release.replace(\"v\",\"\");\n        break;\n\n    case \"osrelease\":\n        release = release.replace('Codename:', '');\n        release = release.trim();\n        break;\n \n    case \"php\":\n        release = release.replace(/\\n/g, '');\n        release = release.split(\" \")[1];\n        release = release.split(\"~\")[0];\n        break;\n \n    case \"python3\":\n        release = release.replace(/\\n/g, '');\n        release = release.replace('Python ', '');\n        break;\n \n    case \"sqlite3\":\n        release = release.split(\" \")[0];\n        break;\n\n    default:\n        break;\n}\n\nconst d1 = new Date();\n\nmsg.payload = ''\ndata.hostname = msg.hostname\ndata.last_seen = d1.getTime();\ndata.product  = msg.command\ndata.release  = release\n\nmsg.data = data\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 880,
-        "y": 1020,
+        "y": 980,
         "wires": [
             [
                 "30a1e3300b66a76d",
@@ -2164,8 +2147,25 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1170,
+        "x": 1110,
         "y": 900,
+        "wires": []
+    },
+    {
+        "id": "dee84253b03a8b3d",
+        "type": "debug",
+        "z": "5f485e062dc78bcc",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 980,
         "wires": []
     },
     {
@@ -2193,7 +2193,7 @@
         "mode": "return",
         "links": [],
         "x": 820,
-        "y": 2040,
+        "y": 1940,
         "wires": [],
         "l": true
     },
@@ -2204,7 +2204,7 @@
         "name": "SQL",
         "links": [],
         "x": 190,
-        "y": 2040,
+        "y": 1940,
         "wires": [
             [
                 "56067af27aa5ae1b"
@@ -2295,7 +2295,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 530,
-        "y": 2200,
+        "y": 2100,
         "wires": []
     },
     {
@@ -2337,8 +2337,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "Replace/Insert nodes",
-        "x": 900,
-        "y": 1320,
+        "x": 860,
+        "y": 1340,
         "wires": [
             [
                 "4580c3770f462b87",
@@ -2355,7 +2355,7 @@
         "sql": "select * from piinfo where hostname = {{msg.payload}};",
         "name": "SQL processor",
         "x": 480,
-        "y": 2040,
+        "y": 1940,
         "wires": [
             [
                 "2e1965f8b492ac30"
@@ -2470,7 +2470,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 430,
+        "x": 490,
         "y": 720,
         "wires": [
             [
@@ -2480,7 +2480,8 @@
                 "4c915de405444c8c"
             ],
             [
-                "a8443f7abba10aba"
+                "a8443f7abba10aba",
+                "8b142d9d4a76cd19"
             ],
             [
                 "8b142d9d4a76cd19"
@@ -2492,7 +2493,7 @@
         "type": "debug",
         "z": "5f485e062dc78bcc",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2509,7 +2510,7 @@
         "type": "debug",
         "z": "5f485e062dc78bcc",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2598,7 +2599,7 @@
         "type": "debug",
         "z": "5f485e062dc78bcc",
         "name": "debug 7",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2642,7 +2643,6 @@
         "id": "2e19962c31ddd1f9",
         "type": "inject",
         "z": "5f485e062dc78bcc",
-        "d": true,
         "name": "",
         "props": [
             {
@@ -2669,621 +2669,10 @@
         ]
     },
     {
-        "id": "b0ccea53ef5e88af",
-        "type": "debug",
-        "z": "5f485e062dc78bcc",
-        "name": "dump all",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 100,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "433bed84a6533cd6",
-        "type": "debug",
-        "z": "5f485e062dc78bcc",
-        "name": "debug 10",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 280,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "f2b1995e7ef49f63",
-        "type": "debug",
-        "z": "5f485e062dc78bcc",
-        "name": "debug 11",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 1560,
-        "wires": []
-    },
-    {
-        "id": "069e67fa61f24552",
-        "type": "debug",
-        "z": "5f485e062dc78bcc",
-        "name": "debug 12",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 180,
-        "y": 1800,
-        "wires": []
-    },
-    {
-        "id": "4782905a8c65a930",
-        "type": "inject",
-        "z": "5f485e062dc78bcc",
-        "g": "1f5091586d73cdb7",
-        "name": "pihole",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"pihole\":\"pihole -v\"}",
-        "payloadType": "json",
-        "x": 910,
-        "y": 260,
-        "wires": [
-            [
-                "d7ba2e7a7fe33a57"
-            ]
-        ]
-    },
-    {
-        "id": "1f7d06dae76cfa22",
-        "type": "inject",
-        "z": "5f485e062dc78bcc",
-        "name": "user",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"user\": \"id\"}",
-        "payloadType": "json",
-        "x": 1130,
-        "y": 180,
-        "wires": [
-            [
-                "d7ba2e7a7fe33a57"
-            ]
-        ]
-    },
-    {
-        "id": "b29cef29242e340c",
-        "type": "inject",
-        "z": "5f485e062dc78bcc",
-        "name": "lsb_release -c && uname -m",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"osrelease\":\"lsb_release -c && uname -m\"}",
-        "payloadType": "json",
-        "x": 300,
-        "y": 400,
-        "wires": [
-            [
-                "d57160dfbd21a0a2"
-            ]
-        ]
-    },
-    {
-        "id": "a8efc2596e6ac0c7",
-        "type": "inject",
-        "z": "5f485e062dc78bcc",
-        "name": "uname -m",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"osrelease\":\"uname -m\"}",
-        "payloadType": "json",
-        "x": 520,
-        "y": 400,
-        "wires": [
-            [
-                "d57160dfbd21a0a2"
-            ]
-        ]
-    },
-    {
-        "id": "c46133d8e5fec274",
-        "type": "switch",
-        "z": "5f485e062dc78bcc",
-        "name": "",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "argonpi",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 270,
-        "y": 760,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b45708f8eec1dbcc",
-        "type": "switch",
-        "z": "5f485e062dc78bcc",
-        "name": "",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "REPLACE",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1130,
-        "y": 520,
-        "wires": [
-            [
-                "f230daee9fb70fc9"
-            ]
-        ]
-    },
-    {
-        "id": "1723e2031e29dfe7",
-        "type": "sqlite",
-        "z": "5f485e062dc78bcc",
-        "g": "a45c305e31a9c284",
-        "mydb": "d54830887efaf336",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "Replace/Insert nodes",
-        "x": 900,
-        "y": 1440,
-        "wires": [
-            [
-                "4580c3770f462b87",
-                "0849daceb2bc989c"
-            ]
-        ]
-    },
-    {
-        "id": "c38406466f8ba7c4",
-        "type": "link out",
-        "z": "5f485e062dc78bcc",
-        "name": "to SQL INSERT",
-        "mode": "link",
-        "links": [
-            "f00c51a9cf1b2bf1"
-        ],
-        "x": 1335,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "f00c51a9cf1b2bf1",
-        "type": "link in",
-        "z": "5f485e062dc78bcc",
-        "name": "SQL INSERT",
-        "links": [
-            "c38406466f8ba7c4"
-        ],
-        "x": 715,
-        "y": 1520,
-        "wires": [
-            [
-                "1723e2031e29dfe7"
-            ]
-        ]
-    },
-    {
-        "id": "0849daceb2bc989c",
+        "id": "eca0f7655fc22ac8",
         "type": "debug",
         "z": "5f485e062dc78bcc",
         "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1190,
-        "y": 1440,
-        "wires": []
-    },
-    {
-        "id": "aa2a371fc3cad6b8",
-        "type": "inject",
-        "z": "5f485e062dc78bcc",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "REPLACE INTO piInfo (     hostname,      last_seen,     ip,     model,     osrelease,     temperature,     uptime,     disk_percentused     ) VALUES (     \"superpi\",      1676420913495,     \"192.168.48.221\",     \"Pi 4 Model B Rev 1.2\",     \"bullseye\",      54,     \"up 1 week, 1 day, 54 minutes\",     \"\" )  WHERE hostname = \"superpi\";",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1260,
-        "y": 400,
-        "wires": [
-            [
-                "f230daee9fb70fc9"
-            ]
-        ]
-    },
-    {
-        "id": "5ed8b50c1753c743",
-        "type": "debug",
-        "z": "5f485e062dc78bcc",
-        "name": "debug 23",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1220,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "f230daee9fb70fc9",
-        "type": "function",
-        "z": "5f485e062dc78bcc",
-        "name": "function 1",
-        "func": "let sql = msg.topic\nlet sql1 = sql.split(\"WHERE\")\n//node.warn(sql1[0])\nmsg.topic = sql1[0]\nmsg.data = ''\nmsg.error = ''\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1300,
-        "y": 520,
-        "wires": [
-            [
-                "c38406466f8ba7c4",
-                "5ed8b50c1753c743"
-            ]
-        ]
-    },
-    {
-        "id": "514ee221c7d2776e",
-        "type": "debug",
-        "z": "5f485e062dc78bcc",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1130,
-        "y": 1680,
-        "wires": []
-    },
-    {
-        "id": "f4a9fd0bfe2bfd65",
-        "type": "debug",
-        "z": "5f485e062dc78bcc",
-        "name": "USER",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "d76190b30ce7791b",
-        "type": "split",
-        "z": "5f485e062dc78bcc",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 650,
-        "y": 1820,
-        "wires": [
-            [
-                "06180f0d0629fe87"
-            ]
-        ]
-    },
-    {
-        "id": "06180f0d0629fe87",
-        "type": "switch",
-        "z": "5f485e062dc78bcc",
-        "name": "",
-        "property": "payload.device_status",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 770,
-        "y": 1840,
-        "wires": [
-            [
-                "5910883c65ee8cfb",
-                "019cefb02c5388ce"
-            ]
-        ]
-    },
-    {
-        "id": "5910883c65ee8cfb",
-        "type": "debug",
-        "z": "5f485e062dc78bcc",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1030,
-        "y": 1840,
-        "wires": []
-    },
-    {
-        "id": "019cefb02c5388ce",
-        "type": "change",
-        "z": "5f485e062dc78bcc",
-        "name": "",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.hostname",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 910,
-        "y": 1800,
-        "wires": [
-            [
-                "ea12c3583f378021"
-            ]
-        ]
-    },
-    {
-        "id": "b0c8eec79c278b65",
-        "type": "inject",
-        "z": "5f485e062dc78bcc",
-        "name": "restart",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"restart\": \"sudo systemctl restart pypi-info\"}",
-        "payloadType": "json",
-        "x": 1130,
-        "y": 120,
-        "wires": [
-            [
-                "d7ba2e7a7fe33a57"
-            ]
-        ]
-    },
-    {
-        "id": "c1d26e7cb6507da5",
-        "type": "inject",
-        "z": "5f485e062dc78bcc",
-        "name": "status",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"restart\":\"sudo systemctl status pypi-info\"}",
-        "payloadType": "json",
-        "x": 1130,
-        "y": 80,
-        "wires": [
-            [
-                "d7ba2e7a7fe33a57"
-            ]
-        ]
-    },
-    {
-        "id": "5f465c0c8be97159",
-        "type": "mqtt in",
-        "z": "5f485e062dc78bcc",
-        "name": "",
-        "topic": "pypi_info/testpi/#",
-        "qos": "2",
-        "datatype": "json",
-        "broker": "fc280b0a645350ec",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 260,
-        "y": 2320,
-        "wires": [
-            [
-                "c70ba0e9be7b0f7c"
-            ]
-        ]
-    },
-    {
-        "id": "c70ba0e9be7b0f7c",
-        "type": "debug",
-        "z": "5f485e062dc78bcc",
-        "name": "debug 24",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 2320,
-        "wires": []
-    },
-    {
-        "id": "eace192cb51a9737",
-        "type": "comment",
-        "z": "5f485e062dc78bcc",
-        "name": "get lwt info",
-        "info": "",
-        "x": 240,
-        "y": 2280,
-        "wires": []
-    },
-    {
-        "id": "a8b6e0900b3979c0",
-        "type": "mqtt in",
-        "z": "5f485e062dc78bcc",
-        "name": "",
-        "topic": "pypi_info/#",
-        "qos": "2",
-        "datatype": "json",
-        "broker": "fc280b0a645350ec",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 240,
-        "y": 2400,
-        "wires": [
-            [
-                "5610d3afbc671454"
-            ]
-        ]
-    },
-    {
-        "id": "5610d3afbc671454",
-        "type": "debug",
-        "z": "5f485e062dc78bcc",
-        "name": "debug 25",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -3292,8 +2681,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 2400,
+        "x": 190,
+        "y": 940,
         "wires": []
     },
     {
@@ -3350,7 +2739,7 @@
         "name": "Show Pi details",
         "order": 2,
         "width": "8",
-        "height": "14",
+        "height": 10,
         "format": "\n<div id=\"et_home\">\n<h2 style=\"text-align: center; text-transform: uppercase;\">{{msg.host}} </h2>\n<p style=\"text-align: center;\">Details for <span class=\"hostname\">{{msg.host}}</span> found on your LAN<p>\n\n<h2 style=\"text-align: center;  background-color: #ffa0a8 !important;\" ng-if='msg.piinfo[0].device_status ==  0' >OFFLINE</h2>\n\n<div style=\"text-align: center;\"> <span class=\"bold-this\">{{msg.piinfo[0].model}}</span> running <span class=\"bold-this\">{{msg.piinfo[0].osrelease}}</span>\n<br/> last seen <span class=\"bold-this\">{{msg.piinfo[0].last_seen_text}}</span>  \n<br/>  <span class=\"bold-this\">{{msg.piinfo[0].uptime}}</span>. \n<br/>Temperature <span class=\"bold-this\">{{msg.piinfo[0].temperature}}C</span> and used <span class=\"bold-this\">{{msg.diskspace[0].disk_percentused}}</span> of it's storage.\n</div>\n<br>\n<table id=\"table\" border=\"1\" style=\"margin-left: auto; margin-right: auto;\">\n<caption class=\"bold-this\">Installed Software</caption>\n<tbody style=\"text-align: center\">\n    <tr>\n        <th>Product</th> \n        <th>Version</th> \n    </tr>\n    <tbody style=\"text-align: left\">\n        <tr ng-repeat=\"x in msg.software\">\n            <td ng-if='msg.piinfo[0].device_status ==  1' class=\"device_online\"  >{{x.product}} </td>\n            <td ng-if='msg.piinfo[0].device_status ==  0' class=\"device_offline\" >{{x.product}} </td>\n\n            <td ng-if='msg.piinfo[0].device_status ==  1' class=\"version device_online\"  >{{x.release}} </td>\n            <td ng-if='msg.piinfo[0].device_status ==  0' class=\"version device_offline\" >{{x.release}} </td>\n         </tr>\n    </tbody>\n</table>\n\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -3361,7 +2750,7 @@
         "y": 680,
         "wires": [
             [
-                "8dad5f04e3203029"
+                "3bf7e8d1c017b182"
             ]
         ]
     },
@@ -3380,10 +2769,27 @@
         "y": 620,
         "wires": [
             [
-                "3192703242c4ab5b",
-                "358a85dbcabef9b4"
+                "e5c96e9da8edbd9d",
+                "3192703242c4ab5b"
             ]
         ]
+    },
+    {
+        "id": "3bf7e8d1c017b182",
+        "type": "debug",
+        "z": "c4ddbef3c7b4c989",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 680,
+        "wires": []
     },
     {
         "id": "7bf10a0eac722154",
@@ -3444,6 +2850,21 @@
         "wires": []
     },
     {
+        "id": "e5c96e9da8edbd9d",
+        "type": "debug",
+        "z": "c4ddbef3c7b4c989",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 970,
+        "y": 620,
+        "wires": []
+    },
+    {
         "id": "9f314facdb870efb",
         "type": "change",
         "z": "c4ddbef3c7b4c989",
@@ -3501,7 +2922,7 @@
         "type": "debug",
         "z": "c4ddbef3c7b4c989",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3585,10 +3006,25 @@
         "y": 320,
         "wires": [
             [
-                "f1140d4671eb769b",
-                "379a8bf7a2461afd"
+                "be2aaf2505c9ccd2",
+                "f1140d4671eb769b"
             ]
         ]
+    },
+    {
+        "id": "be2aaf2505c9ccd2",
+        "type": "debug",
+        "z": "c4ddbef3c7b4c989",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 970,
+        "y": 320,
+        "wires": []
     },
     {
         "id": "2e163ab404c73f72",
@@ -3671,10 +3107,25 @@
         "y": 440,
         "wires": [
             [
-                "4243d6d8dd5c6747",
-                "6aaf11e5fcb3656f"
+                "e2949006341692d9",
+                "4243d6d8dd5c6747"
             ]
         ]
+    },
+    {
+        "id": "e2949006341692d9",
+        "type": "debug",
+        "z": "c4ddbef3c7b4c989",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 970,
+        "y": 440,
+        "wires": []
     },
     {
         "id": "f1140d4671eb769b",
@@ -3757,10 +3208,25 @@
         "y": 380,
         "wires": [
             [
-                "2e163ab404c73f72",
-                "0f5842c32f9f58be"
+                "0b1f71fe1c0ec572",
+                "2e163ab404c73f72"
             ]
         ]
+    },
+    {
+        "id": "0b1f71fe1c0ec572",
+        "type": "debug",
+        "z": "c4ddbef3c7b4c989",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 970,
+        "y": 380,
+        "wires": []
     },
     {
         "id": "4243d6d8dd5c6747",
@@ -3843,10 +3309,25 @@
         "y": 500,
         "wires": [
             [
-                "a22ce911db1432ab",
-                "3c6a32485b47e527"
+                "a954c53d6a6514e1",
+                "a22ce911db1432ab"
             ]
         ]
+    },
+    {
+        "id": "a954c53d6a6514e1",
+        "type": "debug",
+        "z": "c4ddbef3c7b4c989",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 970,
+        "y": 500,
+        "wires": []
     },
     {
         "id": "2bc160383d88bbdb",
@@ -3908,7 +3389,7 @@
         "type": "debug",
         "z": "c4ddbef3c7b4c989",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4010,10 +3491,25 @@
         "y": 560,
         "wires": [
             [
-                "5b8acf9663cdbc60",
-                "057c4796d05da1e5"
+                "484c32c11eca7863",
+                "5b8acf9663cdbc60"
             ]
         ]
+    },
+    {
+        "id": "484c32c11eca7863",
+        "type": "debug",
+        "z": "c4ddbef3c7b4c989",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 970,
+        "y": 560,
+        "wires": []
     },
     {
         "id": "ddf8ae6f12383d94",
@@ -4110,7 +3606,7 @@
         "type": "debug",
         "z": "c4ddbef3c7b4c989",
         "name": "debug 2",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4127,7 +3623,7 @@
         "type": "debug",
         "z": "c4ddbef3c7b4c989",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4182,125 +3678,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "379a8bf7a2461afd",
-        "type": "debug",
-        "z": "c4ddbef3c7b4c989",
-        "name": "debug 14",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 980,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "0f5842c32f9f58be",
-        "type": "debug",
-        "z": "c4ddbef3c7b4c989",
-        "name": "debug 15",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 980,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "6aaf11e5fcb3656f",
-        "type": "debug",
-        "z": "c4ddbef3c7b4c989",
-        "name": "debug 16",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 980,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "3c6a32485b47e527",
-        "type": "debug",
-        "z": "c4ddbef3c7b4c989",
-        "name": "debug 17",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 980,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "057c4796d05da1e5",
-        "type": "debug",
-        "z": "c4ddbef3c7b4c989",
-        "name": "debug 18",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 980,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "358a85dbcabef9b4",
-        "type": "debug",
-        "z": "c4ddbef3c7b4c989",
-        "name": "debug 19",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 980,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "8dad5f04e3203029",
-        "type": "debug",
-        "z": "c4ddbef3c7b4c989",
-        "name": "debug 20",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 980,
-        "y": 680,
-        "wires": []
     },
     {
         "id": "a2bea571e56fd323",
@@ -5162,29 +4539,5 @@
         "x": 1120,
         "y": 520,
         "wires": []
-    },
-    {
-        "id": "99d9528ed5a01aa7",
-        "type": "inject",
-        "z": "feb7fb4e1a842f5a",
-        "name": "delete from software where product = \"restart\" ",
-        "props": [
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "delete from software where product = \"restart\" ",
-        "x": 400,
-        "y": 1440,
-        "wires": [
-            [
-                "fdc18ab65962654d"
-            ]
-        ]
     }
 ]
