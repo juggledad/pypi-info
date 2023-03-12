@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-############################################################################## 
-# 
+##############################################################################
+#
 # Name       : pypi-info.py
 # GitHub     : https://github.com/juggledad/pypi-info
 # Author     : Paul M Woodard
@@ -9,25 +9,25 @@
 #
 # Description: This program processes commands and returns results via MQTT.
 # subscribe topic: "pypi_info/command/#"
-# publish topic  : "pypi_info/H/result/C" where 
+# publish topic  : "pypi_info/result/C/H" where
+#                   C= the command
 #                   H= hostname of the PI
-#                   C= the command 
-# the content of the command is in the format: {"command id": "actual command"} 
+# the content of the command is in the format: {"command id": "actual command"}
 # example: {"ip": "hostname -I"}
 #          {"osrelease":"cat /etc/os-release"}
 # the result will be returned in json format with stdout and stderr
 # example: {"stdout": "192.168.48.243 \n", "stderr": ""}
 #
-# 2023-03-09 PMW - Changed the order of the levels in the topic reply
-#                - added a 'lwt' 
+# version - 2023-01-12 - working
+#         - 2023-03-12 - change publish topic
 ##############################################################################
 
 import paho.mqtt.client as mqtt
 import time
 import socket
-import subprocess  
+import subprocess
 import json
-  
+
 # ---------------------------------------------------------
 # enter your MQTT broker's IP or hostname in pypi-config.py
 # ---------------------------------------------------------
@@ -38,7 +38,7 @@ hostname = socket.gethostname()
 connection_topic = "pypi_info/connected/connected/hostname"
 subscribe_topic  = "pypi_info/command/#"
 publish_topic    = "pypi_info"  # the rest of the reply topic will be built later
-lwt_msg = hostname + " is OFFLINE"
+
 result_dict = {}
 
 # ----------------------------------------
@@ -63,26 +63,25 @@ def on_message(client, userdata, message):
     y = json.loads(message.payload.decode("utf-8"))
 
     global th_abort
- 
+
     if "abort" in message.payload.decode("utf-8"):
-        client.publish(publish_topic+"/"+hostname, "closing pypi_info.py", 0)
+        client.publish(publish_topic+"/results/"+hostname, "closing pypi_info.py", 0)
         th_abort = True
-        
+
     # grab command from incoming topic to put in reply topic
     topic = message.topic
-    print ("topic received=",topic)
     topic = topic.split("/")
     command = topic[2]
-    topic = publish_topic+"/"+hostname+"/"+"results"+"/"+command
+    topic = publish_topic+"/results/"+hostname+"/"+command
 
     cmd_with_options = y[command]
 
     # run the command
-    process = subprocess.Popen(cmd_with_options, 
+    process = subprocess.Popen(cmd_with_options,
                       shell=True,
-                      stdout = subprocess.PIPE, 
-                      stderr = subprocess.PIPE, 
-                      universal_newlines=True) 
+                      stdout = subprocess.PIPE,
+                      stderr = subprocess.PIPE,
+                      universal_newlines=True)
     # get the output as a array
     output = process.communicate()
     print("stdout= ", output[0], "stderr= ", output[1]) #
@@ -94,15 +93,15 @@ def on_message(client, userdata, message):
     result_dict["stderr"]   = output[1]
     result_json = json.dumps(result_dict)
 
-    # publish the result 
-    client.publish(topic, result_json, 0) 
+    # publish the result
+    client.publish(topic, result_json, 0)
 
 # ----------------------------------------
 # Starting code
 # ----------------------------------------
 th_abort = False
 client   = mqtt.Client() #create new instance
-client.will_set("pypi_info/lwt/"+hostname, lwt_msg, qos=0, retain=False)
+
 client.on_connect   = on_connect
 client.on_subscribe = on_subscribe
 client.on_message   = on_message
@@ -114,7 +113,8 @@ client.subscribe(subscribe_topic)
 # client.loop_start
 # ----------------------------------------
 client.loop_start()
-#result, mid = client.publish("pypi_info/result/test", "Just testing MQTT", 0)
+#result, mid = client.publish("result/data", "Just testing MQTT", 0)
+result, mid = client.publish("pypi_info/startup", "Pypi_info.py is runnning", 0)
 
 t = 5
 while t == 5 and not th_abort:
