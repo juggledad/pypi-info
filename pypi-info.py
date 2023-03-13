@@ -113,8 +113,7 @@ client.subscribe(subscribe_topic)
 # client.loop_start
 # ----------------------------------------
 client.loop_start()
-#result, mid = client.publish("result/data", "Just testing MQTT", 0)
-result, mid = client.publish("pypi_info/startup", "Pypi_info.py is runnning", 0)
+result, mid = client.publish("pypi_info/results/startup/"+hostname, "Pypi_info.py is runnning", 0)
 
 t = 5
 while t == 5 and not th_abort:
