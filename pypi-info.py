@@ -113,7 +113,8 @@ client.subscribe(subscribe_topic)
 # client.loop_start
 # ----------------------------------------
 client.loop_start()
-result, mid = client.publish("pypi_info/results/startup/"+hostname, "Pypi_info.py is runnning", 0)
+result_dict["birth"]   = "Pypi_info.py is running"
+result_json = json.dumps(result_dict)
 
 t = 5
 while t == 5 and not th_abort:
