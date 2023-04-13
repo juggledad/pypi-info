@@ -20,6 +20,7 @@
 #
 # version - 2023-01-12 - working
 #         - 2023-03-12 - change publish topic
+#         - 2023-04-13 - changed loop_start() to return msg as json
 ##############################################################################
 
 import paho.mqtt.client as mqtt
