@@ -3,7 +3,7 @@
 #
 # PyPi-info processes a received command and returns the results in a MQTT msg.
 # The program (pypi-info.py) and it's configuration file (pypiconfig.py) are 
-# placed in usr/local/bin and this file is placed in /etc/systemd/system
+# placed in usr/local/bin and this file is placed in /lib/systemd/system
 
 [Unit]
  Description=pypi-info: NR command proccesser
