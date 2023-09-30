@@ -68,5 +68,11 @@ Running the following command will download and run the script **pypi-install.sh
 ```
 bash <(curl -sL https://raw.githubusercontent.com/juggledad/pypi-info/main/pypi-install.sh)
 ```
+## NOTE IMPOTRANT!!
+If your Pi's user name is not 'pi' you need to modify /lib/systemd/system/pypi-info.service and change the line
+```
+User=pi
+```
+to your users name.
 
 [^1]: pypi-info.py might run on other devices, it just hasn't been tested.
