@@ -25,11 +25,22 @@ cd $HOME
 sudo rm -rf pypiinfo
 sudo rm -rf .pypiinfo
 
-echo "====> install python3-pip and paho-mqtt"
+echo "====> install python3-pip and paho-mqtt or python3-paho-matt"
 sudo apt update
 sudo apt full-upgrade -y
 sudo apt install python3 -y
 sudo apt install python3-pip -y
+
+. /etc/os-release
+NAME=$VERSION_CODENAME
+echo '======================================='
+if [[ $NAME == "bookworm" ]]
+then
+   sudo pip3 install python3-paho-mqtt
+else
+   sudo pip3 install paho-mqtt
+fi
+
 sudo pip3 install paho-mqtt
 
 echo "====> enable the pypi-info.service"
